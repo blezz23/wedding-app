@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./WeakestLink.module.css"
+import styles from "./WeddingQuiz.module.css"
 
-class WeakestLink extends React.Component {
+class WeddingQuiz extends React.Component {
     render() {
         return (
             <div className={styles}>
@@ -11,4 +11,4 @@ class WeakestLink extends React.Component {
     }
 }
 
-export default WeakestLink;
+export default WeddingQuiz;
