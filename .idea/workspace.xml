@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8515d9ea-bb99-4c24-a524-f5948a034996" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Redux/redux-store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WeddingQuiz/WeddingQuiz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/WeddingQuiz/WeddingQuiz.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppMenu/AppMenu.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/WeakestLink.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppMenu/WeddingQuiz/WeddingQuiz.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WeakestLink/WeakestLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/WeakestLink/WeakestLink.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WeakestLink/WeakestLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/WeakestLink.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WeakestLink/WeakestLink.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/AppMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WeddingQuiz/WeddingQuiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeddingQuiz/WeddingQuiz.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WeddingQuiz/WeddingQuiz.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +53,11 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\react-project\wedding-app\src\AppMenu" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -86,7 +95,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1598892748560</updated>
-      <workItem from="1598892750586" duration="5322000" />
+      <workItem from="1598892750586" duration="5397000" />
+      <workItem from="1599030881163" duration="4696000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1598895008977</created>
@@ -102,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598895242453</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Start. Add Component and store.">
+      <created>1598898165864</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1598898165864</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,7 +130,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -121,6 +140,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Start" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start" />
+    <MESSAGE value="Start. Add Component and store." />
+    <option name="LAST_COMMIT_MESSAGE" value="Start. Add Component and store." />
   </component>
 </project>

@@ -5,7 +5,7 @@ class WeddingQuiz extends React.Component {
     render() {
         return (
             <div className={styles}>
-
+                Квиз
             </div>
         )
     }

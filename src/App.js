@@ -1,18 +1,21 @@
 import React from 'react';
 import './App.css';
-import WeakestLink from "./WeakestLink/WeakestLink";
-import WeddingQuiz from "./WeddingQuiz/WeddingQuiz";
+import AppMenu from "./AppMenu/AppMenu";
+import WeakestLink from "./AppMenu/WeakestLink/WeakestLink";
+import WeddingQuiz from "./AppMenu/WeddingQuiz/WeddingQuiz";
 import store from "./Redux/redux-store";
+import {Route} from "react-router-dom";
 
 class App extends React.Component {
     render() {
         return (
-            <div className="app-menu">
-                <div className="weakest-link">
-                    <WeakestLink/>
-                </div>
+            <div className="app">
+                <AppMenu/>
                 <div>
-                    <WeddingQuiz />
+                    <Route path="/weakest-link"
+                           render={() => <WeakestLink/>}/>
+                    <Route path="/quiz"
+                           render={() => <WeddingQuiz/>}/>
                 </div>
             </div>
         )
