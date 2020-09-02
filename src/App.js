@@ -1,15 +1,14 @@
 import React from 'react';
 import './App.css';
-import {useRoutes, A} from 'hookrouter';
+import {useRoutes} from 'hookrouter';
 import Routes from './AppMenu/router';
+import AppMenu from "./AppMenu/AppMenu";
 
 function App() {
     const routeResult = useRoutes(Routes);
     return (
         <div className="App">
-            <A href="/quiz"><button>Квиз</button></A>
-            <A href="/weakest-link"><button>Слабое звено</button></A>
-            {routeResult}
+            <AppMenu routeResult={routeResult}/>
         </div>
     );
 }
