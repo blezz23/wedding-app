@@ -1,0 +1,35 @@
+.main {
+    background-color: #1480F3;
+    display: grid;
+    height: 100%;
+    grid-template-columns: 2fr 3fr 3fr;
+    grid-template-rows: 5fr 2fr;
+    grid-gap: 1vw;
+    grid-template-areas:
+            "chain question question"
+            "chain bank timer";
+}
+
+.chain {
+    grid-area: chain;
+    background-color: #1216f3;
+    padding: 10px;
+}
+
+.question {
+    grid-area: question;
+    background-color: #3523f3;
+    padding: 10px;
+}
+
+.timer {
+    grid-area: timer;
+    background-color: #1730f3;
+    padding: 10px;
+}
+
+.bank {
+    grid-area: bank;
+    background-color: #100ef3;
+    padding: 10px;
+}

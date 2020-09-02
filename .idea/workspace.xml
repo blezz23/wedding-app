@@ -2,18 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8515d9ea-bb99-4c24-a524-f5948a034996" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/AppMenu/AppMenu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppMenu/AppMenu.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyBank.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyBank.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyChain.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyChain.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/QuestionWindow.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/QuestionWindow.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/Timer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/Timer.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/AppMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/AppMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/AppMenu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/AppMenu.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyBank.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyBank.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyChain.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyChain.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/WeakestLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/WeakestLink.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeddingQuiz/WeddingQuiz.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeddingQuiz/WeddingQuiz.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/WeakestLink.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/WeakestLink.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1598892748560</updated>
       <workItem from="1598892750586" duration="5397000" />
-      <workItem from="1599030881163" duration="10195000" />
+      <workItem from="1599030881163" duration="21205000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1598895008977</created>
@@ -134,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599040516684</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Start work with component WeakestLink">
+      <created>1599044479542</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1599044479542</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +166,7 @@
     <MESSAGE value="Start. Add Component and store." />
     <MESSAGE value="Add BrowserRouter + NavLink" />
     <MESSAGE value="Refactor with hookrouter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor with hookrouter" />
+    <MESSAGE value="Start work with component WeakestLink" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start work with component WeakestLink" />
   </component>
 </project>

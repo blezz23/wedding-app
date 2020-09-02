@@ -1,7 +1,16 @@
 .appMenu {
-
+    background-color: #010142;
+    display: grid;
+    grid-template-areas: "quiz weakestLink";
+    height: 50px;
 }
 
-.item {
+.quiz {
+    grid-area: quiz;
+    padding: 10px;
+}
 
+.weakestLink {
+    grid-area: weakestLink;
+    padding: 10px;
 }

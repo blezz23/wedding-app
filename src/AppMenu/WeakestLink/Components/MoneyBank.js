@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './MoneyBank.module.css'
+import styles from './QuestionWindow.module.css'
 
 const MoneyBank = () => {
     return (

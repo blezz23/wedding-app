@@ -5,17 +5,16 @@ import styles from "./AppMenu.module.css"
 const AppMenu = (props) => {
     return (
         <div className={styles.appMenu}>
-            <div className={styles.item}>
+            <div className={styles.quiz}>
                 <A href="/quiz">
-                    <button>Квиз</button>
+                    Квиз
                 </A>
             </div>
-            <div className={styles.item}>
+            <div className={styles.weakestLink}>
                 <A href="/weakest-link">
-                    <button>Слабое звено</button>
+                    Слабое звено
                 </A>
             </div>
-            {props.routeResult}
         </div>
     );
 };
