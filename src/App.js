@@ -1,25 +1,17 @@
 import React from 'react';
 import './App.css';
-import AppMenu from "./AppMenu/AppMenu";
-import WeakestLink from "./AppMenu/WeakestLink/WeakestLink";
-import WeddingQuiz from "./AppMenu/WeddingQuiz/WeddingQuiz";
-import store from "./Redux/redux-store";
-import {Route} from "react-router-dom";
+import {useRoutes, A} from 'hookrouter';
+import Routes from './AppMenu/router';
 
-class App extends React.Component {
-    render() {
-        return (
-            <div className="app">
-                <AppMenu/>
-                <div>
-                    <Route path="/weakest-link"
-                           render={() => <WeakestLink/>}/>
-                    <Route path="/quiz"
-                           render={() => <WeddingQuiz/>}/>
-                </div>
-            </div>
-        )
-    }
+function App() {
+    const routeResult = useRoutes(Routes);
+    return (
+        <div className="App">
+            <A href="/quiz"><button>Квиз</button></A>
+            <A href="/weakest-link"><button>Слабое звено</button></A>
+            {routeResult}
+        </div>
+    );
 }
 
 export default App;
