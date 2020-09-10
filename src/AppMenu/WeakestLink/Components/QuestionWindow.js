@@ -5,22 +5,24 @@ import {connect} from "react-redux";
 const QuestionWindow = (props) => {
     let [activeQuestion, setActiveQuestion] = useState(0);
 
+    const buttonPressed = function(event) {
+        switch (event.key) {
+            case "ArrowLeft":
+                if (activeQuestion > 0)
+                    setActiveQuestion(activeQuestion - 1);
+                break;
+            case "ArrowRight":
+                if (activeQuestion < props.questions.length - 1)
+                    setActiveQuestion(activeQuestion + 1);
+                break;
+            default:
+                return;
+        }
+    };
+
     useEffect(() => {
-        document.onkeydown = function(event) {
-            switch (event.key) {
-                case "ArrowLeft":
-                    if (activeQuestion > 0)
-                        setActiveQuestion(activeQuestion - 1);
-                    break;
-                case "ArrowRight":
-                    if (activeQuestion < props.questions.length - 1)
-                        setActiveQuestion(activeQuestion + 1);
-                    break;
-                default:
-                    return;
-            }
-        };
-    }, [activeQuestion, props.questions.length]);
+        document.addEventListener('keydown', buttonPressed)
+    });
 
     return (
         <div className={styles}>

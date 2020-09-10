@@ -1,0 +1,19 @@
+let initialState = {
+    chain: [
+        {id: 0, value: 40000},
+        {id: 1, value: 30000},
+        {id: 2, value: 20000},
+        {id: 3, value: 15000},
+        {id: 4, value: 10000},
+        {id: 5, value: 5000},
+        {id: 6, value: 2000},
+        {id: 7, value: 1000}
+        ],
+    moneyBank: 0
+};
+
+const moneyChainReducer = (state = initialState) => {
+    return state
+};
+
+export default moneyChainReducer;

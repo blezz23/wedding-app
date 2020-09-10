@@ -1,5 +1,3 @@
-const NEXT_QUESTION = "questions/NEXT_QUESTION";
-
 let initialState = {
     questions: [
         {id: 1, question: "text"},
@@ -7,15 +5,8 @@ let initialState = {
     ]
 };
 
-const questionsReducer = (state = initialState, action) => {
-    switch (action.type) {
-        case NEXT_QUESTION:
-            return state;
-        default:
-            return state;
-    }
+const questionsReducer = (state = initialState) => {
+    return state
 };
-
-export const nextQuestionAC = (nextQuestion) => ({type: NEXT_QUESTION});
 
 export default questionsReducer;
