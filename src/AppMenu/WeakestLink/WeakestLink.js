@@ -5,7 +5,7 @@ import QuestionWindow from "./Components/QuestionWindow";
 import Timer from "./Components/Timer";
 import MoneyBank from "./Components/MoneyBank";
 
-function WeakestLink() {
+const WeakestLink = (props) => {
     return (
         <div className={styles.main}>
             <div className={styles.chain}>
