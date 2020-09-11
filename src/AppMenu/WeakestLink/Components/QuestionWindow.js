@@ -21,8 +21,12 @@ const QuestionWindow = (props) => {
     };
 
     useEffect(() => {
-        document.addEventListener('keydown', buttonPressed)
-    });
+        document.addEventListener('keydown', buttonPressed);
+
+        return () => {
+            document.removeEventListener('keydown', buttonPressed);
+        };
+    }, [buttonPressed]);
 
     return (
         <div className={styles}>

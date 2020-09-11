@@ -1,3 +1,5 @@
+let ADD_BANK_OF_ROUND = "moneyChain/ADD_BANK_OF_ROUND";
+
 let initialState = {
     chain: [
         {id: 0, value: 40000},
@@ -12,8 +14,18 @@ let initialState = {
     moneyBank: 0
 };
 
-const moneyChainReducer = (state = initialState) => {
-    return state
+const moneyChainReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case ADD_BANK_OF_ROUND:
+            return {
+                ...state,
+                moneyBank: action.bankOfRoundSum
+            };
+        default:
+            return state
+    }
 };
+
+export const addBankOfRoundAC = (bankOfRoundSum) => ({type: ADD_BANK_OF_ROUND, bankOfRoundSum});
 
 export default moneyChainReducer;
