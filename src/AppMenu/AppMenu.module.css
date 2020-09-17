@@ -10,7 +10,17 @@
     padding: 10px;
 }
 
+.quizA {
+    text-decoration: none;
+    color: white;
+}
+
 .weakestLink {
     grid-area: weakestLink;
     padding: 10px;
+}
+
+.weakestLinkA {
+    text-decoration: none;
+    color: white;
 }

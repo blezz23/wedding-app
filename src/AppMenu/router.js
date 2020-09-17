@@ -1,9 +1,13 @@
 import React from "react";
-import WeakestLink from "./WeakestLink/WeakestLink";
 import WeddingQuiz from "./WeddingQuiz/WeddingQuiz";
+import WeakestLink from "./WeakestLink/WeakestLink";
+import PlayersMenu from "./PlayersMenu/PlayersMenu";
 
 const Routes = {
-    "/quiz": () => <WeddingQuiz />,
-    "/weakest-link": () => <WeakestLink />
+    "/menu/:quiz": ({quiz}) => <PlayersMenu idGame={quiz}/>,
+    "/menu/:weakestLink": ({weakestLink}) => <PlayersMenu idGame={weakestLink}/>,
+    "/quiz": () => <WeddingQuiz/>,
+    "/weakestLink": () => <WeakestLink/>
+
 };
 export default Routes;

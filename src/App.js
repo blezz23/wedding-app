@@ -4,14 +4,14 @@ import {useRoutes} from "hookrouter";
 import Routes from "./AppMenu/router";
 import AppMenu from "./AppMenu/AppMenu";
 
-function App() {
+const App = () => {
     const routeResult = useRoutes(Routes);
     return (
         <div className="App">
-            <AppMenu />
+            <AppMenu/>
             {routeResult}
         </div>
-    );
-}
+    )
+};
 
 export default App;

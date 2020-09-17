@@ -6,12 +6,12 @@ const AppMenu = (props) => {
     return (
         <div className={styles.appMenu}>
             <div className={styles.quiz}>
-                <A href="/quiz">
+                <A href="/menu/quiz" className={styles.quizA}>
                     Квиз
                 </A>
             </div>
             <div className={styles.weakestLink}>
-                <A href="/weakest-link">
+                <A href="/menu/weakestLink" className={styles.weakestLinkA}>
                     Слабое звено
                 </A>
             </div>

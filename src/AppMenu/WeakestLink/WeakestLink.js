@@ -22,6 +22,6 @@ const WeakestLink = (props) => {
             </div>
         </div>
     )
-}
+};
 
 export default WeakestLink;
