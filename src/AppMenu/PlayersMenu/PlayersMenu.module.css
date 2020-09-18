@@ -1,0 +1,20 @@
+.players {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.players div {
+    padding: 15px;
+    color: white;
+}
+
+A {
+    text-decoration: none;
+    color: white;
+}
+
+input {
+    height: 50px;
+    width: 300px
+}

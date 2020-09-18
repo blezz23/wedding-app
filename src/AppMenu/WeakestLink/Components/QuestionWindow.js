@@ -31,13 +31,15 @@ const QuestionWindow = (props) => {
     return (
         <div className={styles}>
             {props.questions[activeQuestion].question}
+            {props.playersName}
         </div>
     )
 };
 
 let mapStateToProps = (state) => {
     return {
-        questions: state.questionsModule.questions
+        questions: state.questionsModule.questionsRoundOne,
+        playersName: state.playersName.players
     }
 };
 

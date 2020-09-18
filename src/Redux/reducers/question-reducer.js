@@ -1,6 +1,6 @@
 let initialState = {
-    questions: [
-        {id: 1, question: "text"},
+    questionsRoundOne: [
+        {id: 1, question: "Приготовьтесь к первому раунду!"},
         {id: 2, question: "text2"}
     ]
 };
