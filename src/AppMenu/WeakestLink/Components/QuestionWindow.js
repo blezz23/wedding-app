@@ -29,9 +29,9 @@ const QuestionWindow = (props) => {
     }, [buttonPressed]);
 
     return (
-        <div className={styles}>
-            {props.questions[activeQuestion].question}
-            {props.playersName}
+        <div className={styles.questionWindow}>
+            <div className={styles.question}>{props.questions[activeQuestion].question}</div>
+            <div className={styles.player}>{props.playersName[0]?.name}</div>
         </div>
     )
 };
