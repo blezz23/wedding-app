@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './QuestionWindow.module.css'
-import {connect} from "react-redux";
 
 const MoneyBank = (props) => {
     return (
@@ -10,10 +9,4 @@ const MoneyBank = (props) => {
     )
 };
 
-let mapStateToProps = (state) => {
-    return {
-        moneyBank: state.moneyChainModule.moneyBank
-    }
-};
-
-export default connect(mapStateToProps)(MoneyBank);
+export default MoneyBank;

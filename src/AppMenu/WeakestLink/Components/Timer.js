@@ -1,8 +1,8 @@
 import styles from './Timer.module.css'
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, forwardRef, useImperativeHandle} from 'react';
 
-const Timer = () => {
-    const [seconds, setSeconds] = useState(150000);
+const Timer = forwardRef((props, ref) => {
+    const [seconds, setSeconds] = useState(240000);
     const [isActive, setIsActive] = useState(false);
 
     function convertTime(value) {
@@ -17,7 +17,7 @@ const Timer = () => {
     }
 
     function reset() {
-        setSeconds(150000);
+        setSeconds(240000);
         setIsActive(false);
     }
 
@@ -34,6 +34,12 @@ const Timer = () => {
         return () => clearInterval(interval);
     }, [isActive, seconds]);
 
+    useImperativeHandle(ref, () => ({
+        stopTimer() {
+            setIsActive(!isActive)
+        }
+    }));
+
     return (
         <div className={styles}>
             <div>
@@ -49,6 +55,6 @@ const Timer = () => {
             </div>
         </div>
     );
-};
+});
 
 export default Timer;

@@ -8,6 +8,6 @@ const Routes = {
     "/menu/:weakestLink": ({weakestLink}) => <PlayersMenu idGame={weakestLink}/>,
     "/quiz": () => <WeddingQuiz/>,
     "/weakestLink": () => <WeakestLink/>
-
 };
+
 export default Routes;

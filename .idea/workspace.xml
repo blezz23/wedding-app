@@ -2,11 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8515d9ea-bb99-4c24-a524-f5948a034996" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/PlayersMenuReduxForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/SecondPlayersMenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/validate.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/PlayersMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/PlayersMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyBank.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyBank.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyChain.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyChain.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/QuestionWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/QuestionWindow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/QuestionWindow.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/QuestionWindow.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/Timer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/Timer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/WeakestLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/WeakestLink.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Redux/reducers/playersName-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/reducers/playersName-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/reducers/question-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/reducers/question-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +107,9 @@
       <workItem from="1599846562460" duration="8653000" />
       <workItem from="1600334674782" duration="16580000" />
       <workItem from="1600455782148" duration="8623000" />
-      <workItem from="1600534266922" duration="11870000" />
+      <workItem from="1600534266922" duration="11963000" />
+      <workItem from="1600548618720" duration="5492000" />
+      <workItem from="1600673685271" duration="31155000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1598895008977</created>
@@ -183,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1600464696371</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added deletePlayerAC">
+      <created>1600546697850</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1600546697850</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,6 +233,7 @@
     <MESSAGE value="Added MoneyBank + Timer(Min/sec)" />
     <MESSAGE value="Added PlayersMenu" />
     <MESSAGE value="Added PlayersMenuForm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added PlayersMenuForm" />
+    <MESSAGE value="Added deletePlayerAC" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added deletePlayerAC" />
   </component>
 </project>

@@ -10,13 +10,10 @@ body {
 
 html, body {
   height: 100%;
-  margin: 0px;
-  padding: 0px;
 }
 
 #root {
   height: 100%;
-  overflow: hidden;
 }
 
 code {

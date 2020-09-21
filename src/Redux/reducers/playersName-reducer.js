@@ -2,7 +2,13 @@ let ADD_PLAYERS = 'playersName/ADD_PLAYERS';
 let DELETE_PLAYER = 'playersName/DELETE_PLAYER';
 
 let initialState = {
-    players: []
+    playersData: {
+        players: [
+            {name: 'Nikita'},
+            {name: 'Elena'},
+            {name: 'Mr.Nobody'}
+        ]
+    }
 };
 
 const playersNameReducer = (state = initialState, action) => {
@@ -10,8 +16,8 @@ const playersNameReducer = (state = initialState, action) => {
         case ADD_PLAYERS:
             return {
                 ...state,
-                players: action.names
-        };
+                playersData: action.names
+            };
         case DELETE_PLAYER:
             return {
                 ...state,
