@@ -11,20 +11,20 @@ const renderField = ({ input, label, type, meta: { touched, error } }) => (
     </div>
 );
 
-const renderMembers = ({ fields }) => (
+const renderPlayers = ({ fields }) => (
     <ul>
         <li>
-            <button type="button" onClick={() => fields.push({})}>Add Member</button>
+            <button type="button" onClick={() => fields.push({})}>Добавить игрока</button>
         </li>
-        {fields.map((member, index) =>
+        {fields.map((player, index) =>
             <li key={index}>
                 <button
                     type="button"
-                    title="Remove Member"
+                    title="Remove player"
                     onClick={() => fields.remove(index)}/>
                 <h4>Игрок #{index + 1}</h4>
                 <Field
-                    name={`${member}.name`}
+                    name={`${player}.name`}
                     type="text"
                     component={renderField}
                     label={`Игрок ${index + 1}`} />
@@ -38,13 +38,13 @@ const FieldArraysForm = (props) => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <FieldArray name="players" component={renderMembers}/>
+            <FieldArray name="players" component={renderPlayers}/>
             <div>
                 <button type="submit" disabled={submitting}>
                     {(props.numberOfRound <= 1) ? 'Начать игру' : 'Продолжить игру'}
                 </button>
                 <button type="button" disabled={pristine || submitting} onClick={reset}>
-                    Clear Values
+                    Очистить ввод
                 </button>
             </div>
         </form>

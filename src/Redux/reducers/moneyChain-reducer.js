@@ -10,7 +10,7 @@ let initialState = {
         {id: 5, value: 5000},
         {id: 6, value: 2000},
         {id: 7, value: 1000}
-        ],
+    ],
     moneyBank: 0
 };
 

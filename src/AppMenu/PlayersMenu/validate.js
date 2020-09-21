@@ -1,19 +1,19 @@
 const validate = values => {
     const errors = {};
-    if (!values.members || !values.members.length) {
-        errors.members = { _error: 'At least one member must be entered' }
+    if (!values.players || !values.players.length) {
+        errors.players = { _error: 'At least one member must be entered' }
     } else {
-        const membersArrayErrors = [];
-        values.members.forEach((member, memberIndex) => {
-            const memberErrors = {};
-            if (!member || !member.firstName) {
-                memberErrors.firstName = 'Required';
-                membersArrayErrors[memberIndex] = memberErrors
+        const playersArrayErrors = [];
+        values.players.forEach((player, playerIndex) => {
+            const playerErrors = {};
+            if (!player || !player.name) {
+                playerErrors.name = 'Ты не пройдёшь!';
+                playersArrayErrors[playerIndex] = playerErrors
             }
-            return memberErrors
+            return playerErrors
         });
-        if(membersArrayErrors.length) {
-            errors.members = membersArrayErrors
+        if(playersArrayErrors.length) {
+            errors.players = playersArrayErrors
         }
     }
     return errors

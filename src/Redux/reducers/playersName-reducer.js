@@ -6,7 +6,12 @@ let initialState = {
         players: [
             {name: 'Nikita'},
             {name: 'Elena'},
-            {name: 'Mr.Nobody'}
+            {name: 'Mr.Nobody'},
+            {name: 'Hulk'},
+            {name: 'Nikita'},
+            {name: 'Elena'},
+            {name: 'Mr.Nobody'},
+            {name: 'Hulk'}
         ]
     }
 };

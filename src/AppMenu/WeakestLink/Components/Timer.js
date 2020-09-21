@@ -9,11 +9,16 @@ const Timer = forwardRef((props, ref) => {
         const totalSeconds = Math.floor(value/1000);
         const minutes = Math.floor(totalSeconds/60);
         const seconds = totalSeconds - minutes * 60;
-        return minutes + ':' + seconds;
+        if (seconds < 10) {
+            return minutes + ':0' + seconds;
+        } else
+            return minutes + ':' + seconds;
     }
 
     function toggle() {
         setIsActive(!isActive);
+        if (!isActive && props.activeQuestion === 0)
+            props.setActiveQuestion(props.activeQuestion + 1);
     }
 
     function reset() {
@@ -24,13 +29,12 @@ const Timer = forwardRef((props, ref) => {
     useEffect(() => {
         let interval = null;
 
-        if (isActive) {
+        if (isActive && seconds !== 0) {
             interval = setInterval(() => {
                 setSeconds(seconds => seconds - 1000);
             }, 1000);
-        } else if (!isActive && seconds !== 0) {
+        } else
             clearInterval(interval);
-        }
         return () => clearInterval(interval);
     }, [isActive, seconds]);
 

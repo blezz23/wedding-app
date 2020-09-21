@@ -14,22 +14,31 @@ const WeakestLink = (props) => {
     let [localBank, setLocalBank] = useState(0);
     let [currentId, setCurrentId] = useState(7);
     let [activeQuestion, setActiveQuestion] = useState(0);
+    let [playerNameNumber, setPlayerNameNumber] = useState(0);
+    let currentRound = props.questions[`questionsRound${props.numberOfRound}`];
     let timerRef = useRef();
 
-    let currentRound = props.questions[`questionsRound${props.numberOfRound}`];
+    let nextQuestion = () => {
+        (playerNameNumber >= 7)
+            ? setPlayerNameNumber(0)
+            : setPlayerNameNumber(playerNameNumber + 1);
+        if (activeQuestion < currentRound.length - 1)
+            setActiveQuestion(activeQuestion + 1)
+    };
 
-    const buttonPressed = function(event) {
+    const buttonPressed = function (event) {
         switch (event.key) {
             case "y":
             case "Y":
             case "Н":
             case "н":
-                if (currentId >= 0) {
+                if (currentId > 0) {
                     setLocalBank(props.moneyChainModule.chain[currentId].value);
                     setCurrentId(currentId - 1);
-                    if (activeQuestion < currentRound.length - 1) {
-                        setActiveQuestion(activeQuestion + 1);
-                    }
+                    nextQuestion()
+                } else {
+                    setBankOfRound(40000);
+                    timerRef.current.stopTimer()
                 }
                 break;
             case "n":
@@ -38,11 +47,9 @@ const WeakestLink = (props) => {
             case "т":
                 setCurrentId(7);
                 setLocalBank(0);
-                if (activeQuestion < currentRound.length - 1) {
-                    setActiveQuestion(activeQuestion + 1);
-                }
+                nextQuestion();
                 break;
-            case "Enter":
+            case "Backspace":
                 setCurrentId(7);
                 setBankOfRound(bankOfRound + localBank);
                 if (bankOfRound + localBank >= 40000) {
@@ -78,18 +85,20 @@ const WeakestLink = (props) => {
                 <MoneyChain
                     currentId={currentId}
                     bankOfRound={bankOfRound}
-                    moneyChainModule={props.moneyChainModule}
-                />
+                    moneyChainModule={props.moneyChainModule}/>
             </div>
             <div className={styles.question}>
                 <QuestionWindow
                     activeQuestion={activeQuestion}
                     playersName={props.playersName}
-                    currentRound={currentRound}
-                />
+                    playerNameNumber={playerNameNumber}
+                    currentRound={currentRound}/>
             </div>
             <div className={styles.timer}>
-                <Timer ref={timerRef}/>
+                <Timer
+                    ref={timerRef}
+                    setActiveQuestion={setActiveQuestion}
+                    activeQuestion={activeQuestion}/>
             </div>
             <div className={styles.bank}>
                 <MoneyBank moneyBank={props.moneyBank}/>

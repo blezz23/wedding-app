@@ -12,7 +12,7 @@ const PlayersMenu = (props) => {
     };
 
     if (props.numberOfRound > 1) {
-        return <SecondPlayersMenu />
+        return <SecondPlayersMenu players={props.playersName}/>
     }
 
     return (
@@ -26,7 +26,8 @@ const PlayersMenu = (props) => {
 
 let mapStateToProps = (state) => {
     return {
-        numberOfRound: state.questionsModule.numberOfRound
+        numberOfRound: state.questionsModule.numberOfRound,
+        playersName: state.playersName.playersData.players
     }
 };
 let mapDispatchToProps = (dispatch) => {
