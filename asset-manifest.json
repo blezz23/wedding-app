@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/wedding-app/static/css/main.5be08c62.chunk.css",
+    "main.js": "/wedding-app/static/js/main.550dd7e6.chunk.js",
+    "main.js.map": "/wedding-app/static/js/main.550dd7e6.chunk.js.map",
+    "runtime-main.js": "/wedding-app/static/js/runtime-main.3e5c0d46.js",
+    "runtime-main.js.map": "/wedding-app/static/js/runtime-main.3e5c0d46.js.map",
+    "static/js/2.27641129.chunk.js": "/wedding-app/static/js/2.27641129.chunk.js",
+    "static/js/2.27641129.chunk.js.map": "/wedding-app/static/js/2.27641129.chunk.js.map",
+    "index.html": "/wedding-app/index.html",
+    "precache-manifest.fa2a538f4989e1a8d89feb640cdc4e1f.js": "/wedding-app/precache-manifest.fa2a538f4989e1a8d89feb640cdc4e1f.js",
+    "service-worker.js": "/wedding-app/service-worker.js",
+    "static/css/main.5be08c62.chunk.css.map": "/wedding-app/static/css/main.5be08c62.chunk.css.map",
+    "static/js/2.27641129.chunk.js.LICENSE.txt": "/wedding-app/static/js/2.27641129.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3e5c0d46.js",
+    "static/js/2.27641129.chunk.js",
+    "static/css/main.5be08c62.chunk.css",
+    "static/js/main.550dd7e6.chunk.js"
+  ]
+}
