@@ -2,18 +2,16 @@ let ADD_PLAYERS = 'playersName/ADD_PLAYERS';
 let DELETE_PLAYER = 'playersName/DELETE_PLAYER';
 
 let initialState = {
-    playersData: {
-        players: [
-            {name: 'Nikita'},
-            {name: 'Elena'},
-            {name: 'Mr.Nobody'},
-            {name: 'Hulk'},
-            {name: 'Nikita'},
-            {name: 'Elena'},
-            {name: 'Mr.Nobody'},
-            {name: 'Hulk'}
-        ]
-    }
+    playersData: [
+        {id: 0, name: 'Nikita'},
+        {id: 1, name: 'Elena'},
+        {id: 2, name: 'Mr.Nobody'},
+        {id: 3, name: 'Hulk'},
+        {id: 4, name: 'Nikita'},
+        {id: 5, name: 'Elena'},
+        {id: 6, name: 'Mr.Nobody'},
+        {id: 7, name: 'Hulk'}
+    ]
 };
 
 const playersNameReducer = (state = initialState, action) => {
@@ -26,7 +24,7 @@ const playersNameReducer = (state = initialState, action) => {
         case DELETE_PLAYER:
             return {
                 ...state,
-                players: state.players.filter(p => p.id !== action.id)
+                playersData: state.playersData.filter(p => p.id !== action.playerId)
             };
         default:
             return state;
@@ -34,6 +32,6 @@ const playersNameReducer = (state = initialState, action) => {
 };
 
 export const addPlayersAC = (names) => ({type: ADD_PLAYERS, names});
-export const deletePlayerAC = (id) => ({type: DELETE_PLAYER, id});
+export const deletePlayerAC = (playerId) => ({type: DELETE_PLAYER, playerId});
 
 export default playersNameReducer;

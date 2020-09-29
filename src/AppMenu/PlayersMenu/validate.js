@@ -1,7 +1,9 @@
 const validate = values => {
     const errors = {};
     if (!values.players || !values.players.length) {
-        errors.players = { _error: 'At least one member must be entered' }
+        errors.players = { _error: 'Добавьте игроков'}
+    } else if (values.players.length < 8 || values.players.length > 8) {
+        errors.players = { _error: 'Должно быть ровно 8 игроков'}
     } else {
         const playersArrayErrors = [];
         values.players.forEach((player, playerIndex) => {
@@ -12,7 +14,7 @@ const validate = values => {
             }
             return playerErrors
         });
-        if(playersArrayErrors.length) {
+        if (playersArrayErrors.length) {
             errors.players = playersArrayErrors
         }
     }

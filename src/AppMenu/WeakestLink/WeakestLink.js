@@ -111,7 +111,7 @@ let mapStateToProps = (state) => {
     return {
         moneyChainModule: state.moneyChainModule,
         questions: state.questionsModule,
-        playersName: state.playersName.playersData.players,
+        playersName: state.playersName.playersData,
         moneyBank: state.moneyChainModule.moneyBank,
         numberOfRound: state.questionsModule.numberOfRound
     }

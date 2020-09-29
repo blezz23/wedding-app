@@ -4,7 +4,7 @@ const Player = (props) => {
     return (
         <div>
             {props.name}
-            <button>XXX</button>
+            <button onClick={() => props.deletePlayer(props.id)}>XXX</button>
         </div>
     )
 };

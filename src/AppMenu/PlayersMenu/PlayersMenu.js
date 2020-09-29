@@ -7,19 +7,23 @@ import {PlayersMenuReduxForm} from "./PlayersMenuReduxForm";
 
 const PlayersMenu = (props) => {
     const onSubmit = (values) => {
-        props.addPlayers(values);
+        let valuesWithId = values.players.map((pl, index) => {pl.id = index; return pl});
+        props.addPlayers(valuesWithId);
         navigate('/weakestLink')
     };
 
     if (props.numberOfRound > 1) {
-        return <SecondPlayersMenu players={props.playersName}/>
+        return <SecondPlayersMenu
+            players={props.playersName}
+            numberOfRound={props.numberOfRound}
+            addPlayers={props.addPlayers}
+            deletePlayer={props.deletePlayer}/>
     }
 
     return (
         <div>
             <PlayersMenuReduxForm
-                onSubmit={onSubmit}
-                numberOfRound={props.numberOfRound} />
+                onSubmit={onSubmit} />
         </div>
     )
 };
@@ -27,7 +31,7 @@ const PlayersMenu = (props) => {
 let mapStateToProps = (state) => {
     return {
         numberOfRound: state.questionsModule.numberOfRound,
-        playersName: state.playersName.playersData.players
+        playersName: state.playersName.playersData
     }
 };
 let mapDispatchToProps = (dispatch) => {
@@ -35,8 +39,8 @@ let mapDispatchToProps = (dispatch) => {
         addPlayers: (names) => {
             dispatch(addPlayersAC(names));
         },
-        deletePlayer: (id) => {
-            dispatch(deletePlayerAC(id))
+        deletePlayer: (playerId) => {
+            dispatch(deletePlayerAC(playerId))
         }
     }
 };
