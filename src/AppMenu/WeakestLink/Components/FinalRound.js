@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FinalRound = () => {
+const FinalRound = (props) => {
     return (
         <div>
             Final round

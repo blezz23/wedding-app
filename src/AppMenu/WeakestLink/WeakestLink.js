@@ -1,13 +1,14 @@
 import React, {useEffect, useRef, useState} from "react";
+import {connect} from "react-redux";
+import {navigate} from "hookrouter";
 import styles from "./WeakestLink.module.css"
 import MoneyChain from "./Components/MoneyChain";
 import QuestionWindow from "./Components/QuestionWindow";
 import Timer from "./Components/Timer";
 import MoneyBank from "./Components/MoneyBank";
 import {addBankOfRoundAC} from "../../Redux/reducers/moneyChain-reducer";
-import {connect} from "react-redux";
-import {navigate} from "hookrouter";
 import {numberOfRoundChangeAC} from "../../Redux/reducers/question-reducer";
+import {addSumInBankAC, falseAnswerAC, trueAnswerAC} from "../../Redux/reducers/playersName-reducer";
 
 const WeakestLink = (props) => {
     let [bankOfRound, setBankOfRound] = useState(0);
@@ -15,15 +16,28 @@ const WeakestLink = (props) => {
     let [currentId, setCurrentId] = useState(7);
     let [activeQuestion, setActiveQuestion] = useState(0);
     let [playerNameNumber, setPlayerNameNumber] = useState(0);
+    let [stopRound, setStopRound] = useState(0);
     let currentRound = props.questions[`questionsRound${props.numberOfRound}`];
     let timerRef = useRef();
 
     let nextQuestion = () => {
-        (playerNameNumber >= 7)
+        (playerNameNumber === props.playersName.length - 1)
             ? setPlayerNameNumber(0)
             : setPlayerNameNumber(playerNameNumber + 1);
         if (activeQuestion < currentRound.length - 1)
             setActiveQuestion(activeQuestion + 1)
+    };
+
+    let trueAnswer = () => {
+        props.trueAnswer(playerNameNumber)
+    };
+
+    let falseAnswer = () => {
+        props.falseAnswer(playerNameNumber)
+    };
+
+    let addSumInBank = (addSumInBank) => {
+        props.sumAddedInBank(playerNameNumber, addSumInBank)
     };
 
     const buttonPressed = function (event) {
@@ -33,36 +47,48 @@ const WeakestLink = (props) => {
             case "Н":
             case "н":
                 if (currentId > 0) {
+                    trueAnswer();
                     setLocalBank(props.moneyChainModule.chain[currentId].value);
                     setCurrentId(currentId - 1);
                     nextQuestion()
                 } else {
-                    setBankOfRound(40000);
-                    timerRef.current.stopTimer()
+                    if (stopRound === 0) {
+                        setStopRound(stopRound + 1);
+                        trueAnswer();
+                        setBankOfRound(40000);
+                        timerRef.current.stopTimer()
+                    }
                 }
                 break;
             case "n":
             case "N":
             case "Т":
             case "т":
+                falseAnswer();
                 setCurrentId(7);
                 setLocalBank(0);
                 nextQuestion();
                 break;
             case "Backspace":
-                setCurrentId(7);
                 setBankOfRound(bankOfRound + localBank);
                 if (bankOfRound + localBank >= 40000) {
+                    addSumInBank(40000 - bankOfRound);
                     setBankOfRound(40000);
-                    timerRef.current.stopTimer()
+                    setCurrentId(7);
+                    setLocalBank(0);
+                    timerRef.current.stopTimer();
+                    break;
                 }
+                addSumInBank(localBank);
+                setCurrentId(7);
                 setLocalBank(0);
                 break;
             case "+":
                 props.addBankOfRound(bankOfRound + props.moneyChainModule.moneyBank);
                 setBankOfRound(0);
                 setActiveQuestion(0);
-                props.numberOfRoundChange(props.numberOfRound + 1);
+                if (props.numberOfRound < 8 )
+                    props.numberOfRoundChange(props.numberOfRound + 1);
                 navigate("/menu/weakestLink");
                 break;
             default:
@@ -124,7 +150,16 @@ let mapDispatchToProps = (dispatch) => {
         },
         numberOfRoundChange: (numberOfRound) => {
             dispatch(numberOfRoundChangeAC(numberOfRound))
-        }
+        },
+        trueAnswer: (id) => {
+            dispatch(trueAnswerAC(id))
+        },
+        falseAnswer: (id) => {
+            dispatch(falseAnswerAC(id))
+        },
+        sumAddedInBank: (id, sum) => {
+            dispatch(addSumInBankAC(id, sum))
+        },
     }
 };
 

@@ -7,7 +7,12 @@ import {PlayersMenuReduxForm} from "./PlayersMenuReduxForm";
 
 const PlayersMenu = (props) => {
     const onSubmit = (values) => {
-        let valuesWithId = values.players.map((pl, index) => {pl.id = index; return pl});
+        let valuesWithId = values.players.map((pl, index) => {
+            pl.id = index;
+            pl.trueAnswer = 0;
+            pl.falseAnswer = 0;
+            return pl
+        });
         props.addPlayers(valuesWithId);
         navigate('/weakestLink')
     };
@@ -23,7 +28,7 @@ const PlayersMenu = (props) => {
     return (
         <div>
             <PlayersMenuReduxForm
-                onSubmit={onSubmit} />
+                onSubmit={onSubmit}/>
         </div>
     )
 };

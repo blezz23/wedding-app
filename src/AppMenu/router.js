@@ -4,8 +4,8 @@ import WeakestLink from "./WeakestLink/WeakestLink";
 import PlayersMenu from "./PlayersMenu/PlayersMenu";
 
 const Routes = {
-    "/menu/:quiz": ({quiz}) => <PlayersMenu idGame={quiz}/>,
-    "/menu/:weakestLink": ({weakestLink}) => <PlayersMenu idGame={weakestLink}/>,
+    "/menu/:quiz": ({quiz}) => <PlayersMenu game={quiz}/>,
+    "/menu/:weakestLink": ({weakestLink}) => <PlayersMenu game={weakestLink}/>,
     "/quiz": () => <WeddingQuiz/>,
     "/weakestLink": () => <WeakestLink/>
 };

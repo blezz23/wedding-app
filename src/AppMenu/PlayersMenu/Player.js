@@ -1,10 +1,17 @@
 import React from "react";
 
 const Player = (props) => {
+    const confirmForm = () => {
+        if (window.confirm(`Подтвердить удаление игрока ${props.name}`)) {
+            props.deletePlayer(props.id)
+        } else
+            return false
+    };
+
     return (
         <div>
             {props.name}
-            <button onClick={() => props.deletePlayer(props.id)}>XXX</button>
+            <button onClick={confirmForm}>XXX</button>
         </div>
     )
 };
