@@ -9,6 +9,7 @@ import MoneyBank from "./Components/MoneyBank";
 import {addBankOfRoundAC} from "../../Redux/reducers/moneyChain-reducer";
 import {numberOfRoundChangeAC} from "../../Redux/reducers/question-reducer";
 import {addSumInBankAC, falseAnswerAC, trueAnswerAC} from "../../Redux/reducers/playersName-reducer";
+import FinalRound from "./Components/FinalRound";
 
 const WeakestLink = (props) => {
     let [bankOfRound, setBankOfRound] = useState(0);
@@ -116,6 +117,12 @@ const WeakestLink = (props) => {
             document.removeEventListener('keydown', buttonPressed);
         };
     }, [buttonPressed]);
+
+    if (props.numberOfRound === 8) {
+        return <FinalRound
+            players={props.playersName}
+            questions={props.questions}/>
+    }
 
     return (
         <div className={styles.main}>
