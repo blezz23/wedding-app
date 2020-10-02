@@ -13,10 +13,10 @@ const SecondPlayersMenu = (props) => {
             name={pl.name}
             id={pl.id}
             deletePlayer={props.deletePlayer}
-            showStats={setIsShowStats} />);
+            showStats={setIsShowStats}/>);
 
-    let statsPlayers = props.players.sort(function(a, b) {
-        return b['trueAnswer'] - a['trueAnswer'] || a['falseAnswer'] - b['falseAnswer'] || b['sumAddedInBank'] - a['sumAddedInBank']
+    let statsPlayers = props.players.slice(0).sort(function (a, b) {
+        return b.trueAnswer - a.trueAnswer || a.falseAnswer - b.falseAnswer || b.sumAddedInBank - a.sumAddedInBank
     });
 
     let sortStatsPlayers = statsPlayers.map(pl =>
@@ -26,6 +26,12 @@ const SecondPlayersMenu = (props) => {
             falseAnswer={pl.falseAnswer}
             sumAddedInBank={pl.sumAddedInBank}/>);
 
+    let statsDeletedPlayer = <Stats
+        name={props.deletedPlayer.name}
+        trueAnswer={props.deletedPlayer.trueAnswer}
+        falseAnswer={props.deletedPlayer.falseAnswer}
+        sumAddedInBank={props.deletedPlayer.sumAddedInBank}/>;
+
     let nextRound = () => {
         let newPlayers = props.players.map((pl, index) => {
             pl.id = index;
@@ -34,6 +40,7 @@ const SecondPlayersMenu = (props) => {
             pl.sumAddedInBank = 0;
             return pl
         });
+        props.addFirstPlayer(statsPlayers[0].id);
         props.addPlayers(newPlayers);
         setIsShowStats(false);
         navigate('/weakestLink')
@@ -46,6 +53,7 @@ const SecondPlayersMenu = (props) => {
                 <button onClick={nextRound}>Продолжить игру</button>
             </div>
             <div className={isShowStats ? styles.show : styles.hide}>{sortStatsPlayers}</div>
+            <div className={isShowStats ? styles.show : styles.hide}>{statsDeletedPlayer}</div>
         </div>
     )
 };

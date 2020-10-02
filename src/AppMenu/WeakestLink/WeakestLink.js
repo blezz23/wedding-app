@@ -15,7 +15,7 @@ const WeakestLink = (props) => {
     let [localBank, setLocalBank] = useState(0);
     let [currentId, setCurrentId] = useState(7);
     let [activeQuestion, setActiveQuestion] = useState(0);
-    let [playerNameNumber, setPlayerNameNumber] = useState(0);
+    let [playerNameNumber, setPlayerNameNumber] = useState(props.firstPlayer || 0);
     let [stopRound, setStopRound] = useState(0);
     let currentRound = props.questions[`questionsRound${props.numberOfRound}`];
     let timerRef = useRef();
@@ -46,13 +46,16 @@ const WeakestLink = (props) => {
             case "Y":
             case "Н":
             case "н":
-                if (currentId > 0) {
+                if (bankOfRound === 40000) {
+                    break;
+                } else if (currentId > 0) {
                     trueAnswer();
                     setLocalBank(props.moneyChainModule.chain[currentId].value);
                     setCurrentId(currentId - 1);
                     nextQuestion()
                 } else {
                     if (stopRound === 0) {
+                        addSumInBank(40000 - bankOfRound);
                         setStopRound(stopRound + 1);
                         trueAnswer();
                         setBankOfRound(40000);
@@ -64,11 +67,15 @@ const WeakestLink = (props) => {
             case "N":
             case "Т":
             case "т":
-                falseAnswer();
-                setCurrentId(7);
-                setLocalBank(0);
-                nextQuestion();
-                break;
+                if (bankOfRound === 40000) {
+                    break;
+                } else {
+                    falseAnswer();
+                    setCurrentId(7);
+                    setLocalBank(0);
+                    nextQuestion();
+                    break;
+                }
             case "Backspace":
                 setBankOfRound(bankOfRound + localBank);
                 if (bankOfRound + localBank >= 40000) {
@@ -84,10 +91,15 @@ const WeakestLink = (props) => {
                 setLocalBank(0);
                 break;
             case "+":
-                props.addBankOfRound(bankOfRound + props.moneyChainModule.moneyBank);
+                if (props.numberOfRound === 7) {
+                    props.addBankOfRound((bankOfRound * 2) + props.moneyChainModule.moneyBank)
+                } else {
+                    props.addBankOfRound(bankOfRound + props.moneyChainModule.moneyBank)
+                }
                 setBankOfRound(0);
                 setActiveQuestion(0);
-                if (props.numberOfRound < 8 )
+                setStopRound(0);
+                if (props.numberOfRound < 8)
                     props.numberOfRoundChange(props.numberOfRound + 1);
                 navigate("/menu/weakestLink");
                 break;
@@ -139,7 +151,8 @@ let mapStateToProps = (state) => {
         questions: state.questionsModule,
         playersName: state.playersName.playersData,
         moneyBank: state.moneyChainModule.moneyBank,
-        numberOfRound: state.questionsModule.numberOfRound
+        numberOfRound: state.questionsModule.numberOfRound,
+        firstPlayer: state.playersName.firstPlayer.id
     }
 };
 
@@ -159,7 +172,7 @@ let mapDispatchToProps = (dispatch) => {
         },
         sumAddedInBank: (id, sum) => {
             dispatch(addSumInBankAC(id, sum))
-        },
+        }
     }
 };
 
