@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8515d9ea-bb99-4c24-a524-f5948a034996" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/Stats.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/Player.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/PlayersMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/PlayersMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/PlayersMenu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/PlayersMenu.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/SecondPlayersMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/SecondPlayersMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/FinalRound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/FinalRound.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/WeakestLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/WeakestLink.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppMenu/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/reducers/playersName-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/reducers/playersName-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/reducers/question-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/reducers/question-reducer.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -108,7 +103,8 @@
       <workItem from="1600798772501" duration="2542000" />
       <workItem from="1601385942735" duration="18063000" />
       <workItem from="1601457945534" duration="13339000" />
-      <workItem from="1601476501779" duration="15424000" />
+      <workItem from="1601476501779" duration="15655000" />
+      <workItem from="1601629881830" duration="8373000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1598895008977</created>
@@ -222,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601404005894</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added Stats, confirm delete players and other logic">
+      <created>1601493577045</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1601493577045</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,6 +260,7 @@
     <MESSAGE value="Added FieldArray, stopTimer, SecondPlayersMenu and logic in WeakestLink" />
     <MESSAGE value="Refactoring" />
     <MESSAGE value="Added deletePlayer and errors ReduxForm" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added deletePlayer and errors ReduxForm" />
+    <MESSAGE value="Added Stats, confirm delete players and other logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Stats, confirm delete players and other logic" />
   </component>
 </project>

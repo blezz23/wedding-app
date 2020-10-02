@@ -1,7 +1,8 @@
 import React from "react";
 import {navigate} from "hookrouter";
-import {addPlayersAC, deletePlayerAC} from "../../Redux/reducers/playersName-reducer";
 import {connect} from "react-redux";
+import styles from "./PlayersMenu.module.css"
+import {addPlayersAC, deletePlayerAC} from "../../Redux/reducers/playersName-reducer";
 import SecondPlayersMenu from "./SecondPlayersMenu";
 import {PlayersMenuReduxForm} from "./PlayersMenuReduxForm";
 

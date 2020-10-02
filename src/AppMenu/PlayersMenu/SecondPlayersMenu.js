@@ -1,22 +1,30 @@
-import React from "react";
-import Player from "./Player";
+import React, {useState} from "react";
 import {navigate} from "hookrouter";
+import styles from "./PlayersMenu.module.css"
+import Player from "./Player";
 import FinalRound from "../WeakestLink/Components/FinalRound";
 import Stats from "../WeakestLink/Components/Stats";
 
 const SecondPlayersMenu = (props) => {
+    let [isShowStats, setIsShowStats] = useState(false);
+
     let players = props.players.map(pl =>
         <Player
             name={pl.name}
             id={pl.id}
-            deletePlayer={props.deletePlayer} />);
+            deletePlayer={props.deletePlayer}
+            showStats={setIsShowStats} />);
 
-    let statsPlayers = props.players.map(pl =>
+    let statsPlayers = props.players.sort(function(a, b) {
+        return b['trueAnswer'] - a['trueAnswer'] || a['falseAnswer'] - b['falseAnswer'] || b['sumAddedInBank'] - a['sumAddedInBank']
+    });
+
+    let sortStatsPlayers = statsPlayers.map(pl =>
         <Stats
             name={pl.name}
             trueAnswer={pl.trueAnswer}
             falseAnswer={pl.falseAnswer}
-            sumAddedInBank={pl.sumAddedInBank} />);
+            sumAddedInBank={pl.sumAddedInBank}/>);
 
     let nextRound = () => {
         let newPlayers = props.players.map((pl, index) => {
@@ -27,9 +35,7 @@ const SecondPlayersMenu = (props) => {
             return pl
         });
         props.addPlayers(newPlayers);
-        // if (props.numberOfRound > 7) {
-        //     return <FinalRound />
-        // }
+        setIsShowStats(false);
         navigate('/weakestLink')
     };
 
@@ -39,7 +45,7 @@ const SecondPlayersMenu = (props) => {
             <div>
                 <button onClick={nextRound}>Продолжить игру</button>
             </div>
-            <div>{statsPlayers}</div>
+            <div className={isShowStats ? styles.show : styles.hide}>{sortStatsPlayers}</div>
         </div>
     )
 };

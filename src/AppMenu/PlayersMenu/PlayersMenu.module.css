@@ -1,20 +1,11 @@
-.players {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+.stats {
+
 }
 
-.players div {
-    padding: 15px;
-    color: white;
+.show {
+    visibility: visible;
 }
 
-A {
-    text-decoration: none;
-    color: white;
-}
-
-input {
-    height: 50px;
-    width: 300px
+.hide {
+    visibility: hidden;
 }
