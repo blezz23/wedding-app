@@ -9,3 +9,35 @@
 .hide {
     visibility: hidden;
 }
+
+.secondPlayerStyle {
+    width: 800px;
+    height: 50px;
+    border: 1px solid blue;
+    position: relative;
+}
+
+.secondPlayerStyle:hover .deletePlayerButton {
+    visibility: visible;
+}
+
+.secondPlayerName {
+    width:50px;
+    border:1px solid red;
+    height:50px;
+    position: absolute;
+}
+
+.deletePlayerButton {
+    visibility: hidden;
+}
+
+.secondPlayerStyle div {
+    top: 0px;
+    left: 0px;
+}
+
+.secondPlayerStyle button {
+    bottom: 0px;
+    right: 0px;
+}

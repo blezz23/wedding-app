@@ -41,6 +41,23 @@ const WeakestLink = (props) => {
         props.sumAddedInBank(playerNameNumber, addSumInBank)
     };
 
+    const confirmEndRound = () => {
+        if (window.confirm('Подтвердить окончание раунда')) {
+            if (props.numberOfRound === 7) {
+                props.addBankOfRound((bankOfRound * 2) + props.moneyChainModule.moneyBank)
+            } else {
+                props.addBankOfRound(bankOfRound + props.moneyChainModule.moneyBank)
+            }
+            setBankOfRound(0);
+            setActiveQuestion(0);
+            setStopRound(0);
+            if (props.numberOfRound < 8)
+                props.numberOfRoundChange(props.numberOfRound + 1);
+            navigate("/menu/weakestLink");
+        }
+        return false
+    };
+
     const buttonPressed = function (event) {
         switch (event.key) {
             case "y":
@@ -92,17 +109,7 @@ const WeakestLink = (props) => {
                 setLocalBank(0);
                 break;
             case "+":
-                if (props.numberOfRound === 7) {
-                    props.addBankOfRound((bankOfRound * 2) + props.moneyChainModule.moneyBank)
-                } else {
-                    props.addBankOfRound(bankOfRound + props.moneyChainModule.moneyBank)
-                }
-                setBankOfRound(0);
-                setActiveQuestion(0);
-                setStopRound(0);
-                if (props.numberOfRound < 8)
-                    props.numberOfRoundChange(props.numberOfRound + 1);
-                navigate("/menu/weakestLink");
+                confirmEndRound();
                 break;
             default:
                 return;
@@ -118,10 +125,13 @@ const WeakestLink = (props) => {
         };
     }, [buttonPressed]);
 
-    if (props.numberOfRound === 8) {
+    if (props.numberOfRound === 1) {
         return <FinalRound
             players={props.playersName}
-            questions={props.questions}/>
+            questions={props.questions}
+            currentRound={currentRound}
+            activeQuestion={activeQuestion}
+            playerNameNumber={playerNameNumber}/>
     }
 
     return (

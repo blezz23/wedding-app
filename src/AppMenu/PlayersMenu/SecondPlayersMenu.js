@@ -6,7 +6,6 @@ import Stats from "../WeakestLink/Components/Stats";
 
 const SecondPlayersMenu = (props) => {
         let [isShowStats, setIsShowStats] = useState(false);
-        let [delPlayerRound, setDelPlayerRound] = useState(0);
 
         let players = props.players.map(pl =>
             <Player
@@ -14,9 +13,9 @@ const SecondPlayersMenu = (props) => {
                 id={pl.id}
                 deletePlayer={props.deletePlayer}
                 showStats={setIsShowStats}
-                delPlayerRound={delPlayerRound}
-                setDelPlayerRound={setDelPlayerRound}
-                numberOfRound={props.numberOfRound}/>);
+                delPlayerRound={props.allowDeletePlayer}
+                numberOfRound={props.numberOfRound}
+                allowDltPlayer={props.allowDltPlayer}/>);
 
         let statsPlayers = props.players.slice(0).sort(function (a, b) {
             return b.trueAnswer - a.trueAnswer || a.falseAnswer - b.falseAnswer || b.sumAddedInBank - a.sumAddedInBank
@@ -36,7 +35,7 @@ const SecondPlayersMenu = (props) => {
             sumAddedInBank={props.deletedPlayer.sumAddedInBank}/>;
 
         let nextRound = () => {
-            if (props.numberOfRound < 9 && delPlayerRound === 1) {
+            if (props.numberOfRound < 9 && props.allowDeletePlayer === true) {
                 let newPlayers = props.players.map((pl, index) => {
                     pl.id = index;
                     pl.trueAnswer = 0;
@@ -47,6 +46,7 @@ const SecondPlayersMenu = (props) => {
                 props.addFirstPlayer(statsPlayers[0].id);
                 props.addPlayers(newPlayers);
                 setIsShowStats(false);
+                props.allowDltPlayer(false);
                 navigate('/weakestLink')
             }
         };
