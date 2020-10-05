@@ -5,6 +5,7 @@ let FALSE_ANSWER = 'playersName/FALSE_ANSWER';
 let ADD_SUM_IN_BANK = 'playersName/ADD_SUM_IN_BANK';
 let ADD_FIRST_PLAYER = 'playersName/ADD_FIRST_PLAYER';
 let ALLOW_DELETE_PLAYER = 'playersName/ALLOW_DELETE_PLAYER';
+let ADD_FINAL_ANSWER = 'playersName/ADD_FINAL_ANSWER';
 
 let initialState = {
     playersData: [
@@ -75,6 +76,16 @@ const playersNameReducer = (state = initialState, action) => {
                 ...state,
                 allowDeletePlayer: action.allow
             };
+        case ADD_FINAL_ANSWER:
+            return {
+                ...state,
+                playersData: state.playersData.map(item => {
+                    if (item.id === action.playerId) {
+                        item.answer[action.numberQuestion] = action.answer;
+                    }
+                    return item
+                })
+            };
         default:
             return state;
     }
@@ -87,5 +98,6 @@ export const falseAnswerAC = (id) => ({type: FALSE_ANSWER, payload: id});
 export const addSumInBankAC = (id, sum) => ({type: ADD_SUM_IN_BANK, id, sum});
 export const addFirstPlayerAC = (id) => ({type: ADD_FIRST_PLAYER, id});
 export const allowDeletePlayerAC = (allow) => ({type: ALLOW_DELETE_PLAYER, allow});
+export const addFinalAnswerAC = (playerId, answer, numberQuestion) => ({type: ADD_FINAL_ANSWER, playerId, answer, numberQuestion});
 
 export default playersNameReducer;

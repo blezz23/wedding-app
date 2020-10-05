@@ -35,7 +35,7 @@ const SecondPlayersMenu = (props) => {
             sumAddedInBank={props.deletedPlayer.sumAddedInBank}/>;
 
         let nextRound = () => {
-            if (props.numberOfRound < 9 && props.allowDeletePlayer === true) {
+            if (props.numberOfRound < 2 && props.allowDeletePlayer === true) {
                 let newPlayers = props.players.map((pl, index) => {
                     pl.id = index;
                     pl.trueAnswer = 0;
@@ -47,6 +47,14 @@ const SecondPlayersMenu = (props) => {
                 props.addPlayers(newPlayers);
                 setIsShowStats(false);
                 props.allowDltPlayer(false);
+                navigate('/weakestLink')
+            } else {
+                let newPlayers = props.players.map((pl, index) => {
+                    pl.id = index;
+                    pl.answer = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0};
+                    return pl
+                });
+                props.addPlayers(newPlayers);
                 navigate('/weakestLink')
             }
         };

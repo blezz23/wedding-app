@@ -8,7 +8,12 @@ import Timer from "./Components/Timer";
 import MoneyBank from "./Components/MoneyBank";
 import {addBankOfRoundAC} from "../../Redux/reducers/moneyChain-reducer";
 import {numberOfRoundChangeAC} from "../../Redux/reducers/question-reducer";
-import {addSumInBankAC, falseAnswerAC, trueAnswerAC} from "../../Redux/reducers/playersName-reducer";
+import {
+    addFinalAnswerAC,
+    addSumInBankAC,
+    falseAnswerAC,
+    trueAnswerAC
+} from "../../Redux/reducers/playersName-reducer";
 import FinalRound from "./Components/FinalRound";
 
 const WeakestLink = (props) => {
@@ -18,6 +23,7 @@ const WeakestLink = (props) => {
     let [activeQuestion, setActiveQuestion] = useState(0);
     let [playerNameNumber, setPlayerNameNumber] = useState(props.firstPlayer || 0);
     let [stopRound, setStopRound] = useState(0);
+    let [numberFinalQuestion, setNumberFinalQuestion] = useState(1);
     let currentRound = props.questions[`questionsRound${props.numberOfRound}`];
     let timerRef = useRef();
 
@@ -30,11 +36,30 @@ const WeakestLink = (props) => {
     };
 
     let trueAnswer = () => {
-        props.trueAnswer(playerNameNumber)
+        if (props.numberOfRound < 3) {
+            props.trueAnswer(playerNameNumber)
+        } else {
+            if (props.playersName[playerNameNumber].answer[numberFinalQuestion] === 0) {
+                props.addFinalAnswer(playerNameNumber, 1, numberFinalQuestion)
+            } else {
+                setNumberFinalQuestion(numberFinalQuestion + 1);
+                props.addFinalAnswer(playerNameNumber, 1, numberFinalQuestion + 1)
+            }
+        }
     };
 
     let falseAnswer = () => {
-        props.falseAnswer(playerNameNumber)
+        if (props.numberOfRound < 3) {
+            props.falseAnswer(playerNameNumber)
+        } else {
+
+            if (props.playersName[playerNameNumber].answer[numberFinalQuestion] === 0) {
+                props.addFinalAnswer(playerNameNumber, -1, numberFinalQuestion)
+            } else {
+                setNumberFinalQuestion(numberFinalQuestion + 1);
+                props.addFinalAnswer(playerNameNumber, -1, numberFinalQuestion + 1)
+            }
+        }
     };
 
     let addSumInBank = (addSumInBank) => {
@@ -64,36 +89,46 @@ const WeakestLink = (props) => {
             case "Y":
             case "Н":
             case "н":
-                if (bankOfRound === 40000) {
-                    break;
-                } else if (currentId > 0) {
-                    trueAnswer();
-                    setLocalBank(props.moneyChainModule.chain[currentId].value);
-                    setCurrentId(currentId - 1);
-                    nextQuestion()
-                } else {
-                    if (stopRound === 0) {
-                        addSumInBank(40000 - bankOfRound);
-                        setStopRound(stopRound + 1);
+                if (props.numberOfRound < 3) {
+                    if (bankOfRound === 40000) {
+                        break;
+                    } else if (currentId > 0) {
                         trueAnswer();
-                        setBankOfRound(40000);
-                        timerRef.current.stopTimer()
+                        setLocalBank(props.moneyChainModule.chain[currentId].value);
+                        setCurrentId(currentId - 1);
+                        nextQuestion()
+                    } else {
+                        if (stopRound === 0) {
+                            addSumInBank(40000 - bankOfRound);
+                            setStopRound(stopRound + 1);
+                            trueAnswer();
+                            setBankOfRound(40000);
+                            timerRef.current.stopTimer()
+                        }
                     }
+                } else {
+                    trueAnswer();
+                    nextQuestion()
                 }
                 break;
             case "n":
             case "N":
             case "Т":
             case "т":
-                if (bankOfRound === 40000) {
-                    break;
+                if (props.numberOfRound < 3) {
+                    if (bankOfRound === 40000) {
+                        break;
+                    } else {
+                        falseAnswer();
+                        setCurrentId(7);
+                        setLocalBank(0);
+                        nextQuestion()
+                    }
                 } else {
                     falseAnswer();
-                    setCurrentId(7);
-                    setLocalBank(0);
-                    nextQuestion();
-                    break;
+                    nextQuestion()
                 }
+                break;
             case "Backspace":
                 setBankOfRound(bankOfRound + localBank);
                 if (bankOfRound + localBank >= 40000) {
@@ -125,13 +160,13 @@ const WeakestLink = (props) => {
         };
     }, [buttonPressed]);
 
-    if (props.numberOfRound === 1) {
+    if (props.numberOfRound === 3) {
         return <FinalRound
             players={props.playersName}
             questions={props.questions}
             currentRound={currentRound}
             activeQuestion={activeQuestion}
-            playerNameNumber={playerNameNumber}/>
+            playerNameNumber={playerNameNumber} />
     }
 
     return (
@@ -189,6 +224,9 @@ let mapDispatchToProps = (dispatch) => {
         },
         sumAddedInBank: (id, sum) => {
             dispatch(addSumInBankAC(id, sum))
+        },
+        addFinalAnswer: (playerId, answer, numberQuestion) => {
+            dispatch(addFinalAnswerAC(playerId, answer, numberQuestion))
         }
     }
 };

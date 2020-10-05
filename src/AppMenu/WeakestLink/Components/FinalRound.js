@@ -3,12 +3,7 @@ import styles from "./FinalRound.module.css";
 import PlayerFinal from "./PlayerFinal";
 
 const FinalRound = (props) => {
-    let finalPlayers = props.players.map(pl => {
-        pl.answer = {1: '-', 2: '-', 3: '-', 4: '-', 5: '-'};
-        return pl
-    });
-
-    let players = finalPlayers.map(pl => <PlayerFinal name={pl.name} answer={pl.answer} />);
+    let players = props.players.map(pl => <PlayerFinal id={pl.id} name={pl.name} answer={pl.answer} />);
 
     return (
         <div className={styles.questionWindowFinal}>
