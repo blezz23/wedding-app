@@ -36,7 +36,7 @@ const WeakestLink = (props) => {
     };
 
     let trueAnswer = () => {
-        if (props.numberOfRound < 3) {
+        if (props.numberOfRound < 8) {
             props.trueAnswer(playerNameNumber)
         } else {
             if (props.playersName[playerNameNumber].answer[numberFinalQuestion] === 0) {
@@ -49,7 +49,7 @@ const WeakestLink = (props) => {
     };
 
     let falseAnswer = () => {
-        if (props.numberOfRound < 3) {
+        if (props.numberOfRound < 8) {
             props.falseAnswer(playerNameNumber)
         } else {
 
@@ -89,7 +89,7 @@ const WeakestLink = (props) => {
             case "Y":
             case "Н":
             case "н":
-                if (props.numberOfRound < 3) {
+                if (props.numberOfRound < 8) {
                     if (bankOfRound === 40000) {
                         break;
                     } else if (currentId > 0) {
@@ -115,7 +115,7 @@ const WeakestLink = (props) => {
             case "N":
             case "Т":
             case "т":
-                if (props.numberOfRound < 3) {
+                if (props.numberOfRound < 8) {
                     if (bankOfRound === 40000) {
                         break;
                     } else {
@@ -160,13 +160,13 @@ const WeakestLink = (props) => {
         };
     }, [buttonPressed]);
 
-    if (props.numberOfRound === 3) {
+    if (props.numberOfRound === 8) {
         return <FinalRound
             players={props.playersName}
             questions={props.questions}
             currentRound={currentRound}
             activeQuestion={activeQuestion}
-            playerNameNumber={playerNameNumber} />
+            setPlayerNameNumber={setPlayerNameNumber}/>
     }
 
     return (

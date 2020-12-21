@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8515d9ea-bb99-4c24-a524-f5948a034996" name="Default Changelist" comment="">
+    <list default="true" id="8515d9ea-bb99-4c24-a524-f5948a034996" name="Default Changelist" comment="Added FinalRound true/false answers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/Player.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/Player.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/PlayersMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/PlayersMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/PlayersMenu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/PlayersMenu.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/SecondPlayersMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/SecondPlayersMenu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/FinalRound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/FinalRound.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/FinalRound.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/FinalRound.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyBank.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyBank.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyBank.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyBank.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyChain.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyChain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyChain.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyChain.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/PlayerFinal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/PlayerFinal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/QuestionWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/QuestionWindow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/QuestionWindow.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/QuestionWindow.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/Stats.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/Stats.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/Timer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/Timer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/Timer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/Timer.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/WeakestLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/WeakestLink.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/WeakestLink.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/WeakestLink.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Redux/reducers/playersName-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/reducers/playersName-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Redux/reducers/question-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/reducers/question-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,15 +58,23 @@
   </component>
   <component name="ProjectId" id="1gsA6EI7Cm84i81vniqmNQ7meIe" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2019.3.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -109,7 +136,12 @@
       <workItem from="1601629881830" duration="8481000" />
       <workItem from="1601663090172" duration="15944000" />
       <workItem from="1601826761121" duration="12404000" />
-      <workItem from="1601911673110" duration="7549000" />
+      <workItem from="1601911673110" duration="7719000" />
+      <workItem from="1601932145305" duration="6432000" />
+      <workItem from="1602014666676" duration="6982000" />
+      <workItem from="1604093027312" duration="25842000" />
+      <workItem from="1604175761181" duration="292000" />
+      <workItem from="1608571421687" duration="10675000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1598895008977</created>
@@ -258,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601837927817</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Added FinalRound true/false answers">
+      <created>1601919399830</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1601919399830</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,6 +337,37 @@
     <MESSAGE value="Added firstPlayer/bestPlayer" />
     <MESSAGE value="Added block for &quot;delete player&quot; and &quot;resume game&quot;" />
     <MESSAGE value="Added confirm for &quot;+&quot;, allowDltPlayerAC and FinalRound logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added confirm for &quot;+&quot;, allowDltPlayerAC and FinalRound logic" />
+    <MESSAGE value="Added FinalRound true/false answers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added FinalRound true/false answers" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="211" y="72" width="2019" height="1149" key="CommitChangelistDialog2" timestamp="1604104063513">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="211" y="72" width="2019" height="1149" key="CommitChangelistDialog2/3840.550.1536.816/0.0.2560.1400@3840.550.1536.816" timestamp="1604104063513" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1604103856037">
+      <screen x="3840" y="550" width="1536" height="816" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1604095396929" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/3840.550.1536.816/0.0.2560.1400@3840.550.1536.816" timestamp="1604103856037" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1604103856037">
+      <screen x="3840" y="550" width="1536" height="816" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1604095396929" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center/3840.550.1536.816/0.0.2560.1400@3840.550.1536.816" timestamp="1604103856037" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1604103856037">
+      <screen x="3840" y="550" width="1536" height="816" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1604095396929" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left/3840.550.1536.816/0.0.2560.1400@3840.550.1536.816" timestamp="1604103856037" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1604103856037">
+      <screen x="3840" y="550" width="1536" height="816" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1604095396929" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/3840.550.1536.816/0.0.2560.1400@3840.550.1536.816" timestamp="1604103856037" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1604175765796">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1604175765796" />
   </component>
 </project>

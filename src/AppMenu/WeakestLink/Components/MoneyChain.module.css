@@ -1,3 +1,13 @@
 .active {
     font-weight: bold;
+    color: red;
+}
+
+.items {
+    font-size: 40px;
+    line-height: 56px;
+}
+
+#bankRound {
+    margin-top: 51px;
 }

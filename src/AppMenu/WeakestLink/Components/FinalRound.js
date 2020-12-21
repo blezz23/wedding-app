@@ -1,9 +1,27 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from "./FinalRound.module.css";
 import PlayerFinal from "./PlayerFinal";
 
 const FinalRound = (props) => {
-    let players = props.players.map(pl => <PlayerFinal id={pl.id} name={pl.name} answer={pl.answer} />);
+    let [nameFirstPlayer, setNameFirstPlayer] = useState('');
+
+    const checkFirstPlayer = (event) => {
+        setNameFirstPlayer(event.target.textContent)
+    };
+
+    let players = props.players.map(pl => {
+        let isActive = false;
+        if (nameFirstPlayer === pl.name) {
+            isActive = true
+        }
+        return <PlayerFinal
+            id={pl.id}
+            name={pl.name}
+            answer={pl.answer}
+            isActive={isActive}
+            setPlayerNameNumber={props.setPlayerNameNumber}
+            checkFirstPlayer={checkFirstPlayer}/>
+    });
 
     return (
         <div className={styles.questionWindowFinal}>

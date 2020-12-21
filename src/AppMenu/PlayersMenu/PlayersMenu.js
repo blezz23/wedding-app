@@ -1,7 +1,6 @@
 import React from "react";
 import {navigate} from "hookrouter";
 import {connect} from "react-redux";
-import styles from "./PlayersMenu.module.css"
 import {
     addFirstPlayerAC,
     addPlayersAC,
@@ -17,6 +16,7 @@ const PlayersMenu = (props) => {
             pl.id = index;
             pl.trueAnswer = 0;
             pl.falseAnswer = 0;
+            pl.sumAddedInBank = 0;
             return pl
         });
 

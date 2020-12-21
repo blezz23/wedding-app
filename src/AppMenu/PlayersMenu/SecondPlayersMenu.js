@@ -1,11 +1,12 @@
-import React, {useState} from "react";
-import {navigate} from "hookrouter";
-import styles from "./PlayersMenu.module.css"
-import Player from "./Player";
-import Stats from "../WeakestLink/Components/Stats";
+import React, {useState} from 'react';
+import {navigate} from 'hookrouter';
+import styles from './PlayersMenu.module.css'
+import Player from './Player';
+import Stats from '../WeakestLink/Components/Stats';
 
 const SecondPlayersMenu = (props) => {
         let [isShowStats, setIsShowStats] = useState(false);
+        let [isShowPlayers, setIsShowPlayers] = useState(true);
 
         let players = props.players.map(pl =>
             <Player
@@ -13,6 +14,7 @@ const SecondPlayersMenu = (props) => {
                 id={pl.id}
                 deletePlayer={props.deletePlayer}
                 showStats={setIsShowStats}
+                showPlayers={setIsShowPlayers}
                 delPlayerRound={props.allowDeletePlayer}
                 numberOfRound={props.numberOfRound}
                 allowDltPlayer={props.allowDltPlayer}/>);
@@ -35,20 +37,24 @@ const SecondPlayersMenu = (props) => {
             sumAddedInBank={props.deletedPlayer.sumAddedInBank}/>;
 
         let nextRound = () => {
-            if (props.numberOfRound < 2 && props.allowDeletePlayer === true) {
-                let newPlayers = props.players.map((pl, index) => {
-                    pl.id = index;
-                    pl.trueAnswer = 0;
-                    pl.falseAnswer = 0;
-                    pl.sumAddedInBank = 0;
-                    return pl
-                });
+            if (props.numberOfRound < 8 && props.allowDeletePlayer === true) {
+                let newPlayers = {};
+                if (props.numberOfRound <= 7) {
+                    newPlayers = props.players.map((pl, index) => {
+                        pl.id = index;
+                        pl.trueAnswer = 0;
+                        pl.falseAnswer = 0;
+                        pl.sumAddedInBank = 0;
+                        pl.answer = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0};
+                        return pl
+                    })
+                }
                 props.addFirstPlayer(statsPlayers[0].id);
                 props.addPlayers(newPlayers);
-                setIsShowStats(false);
+                (props.numberOfRound < 8) ? setIsShowStats(false) : setIsShowStats(true);
                 props.allowDltPlayer(false);
                 navigate('/weakestLink')
-            } else {
+            } else if (props.numberOfRound === 8) {
                 let newPlayers = props.players.map((pl, index) => {
                     pl.id = index;
                     pl.answer = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0};
@@ -56,17 +62,19 @@ const SecondPlayersMenu = (props) => {
                 });
                 props.addPlayers(newPlayers);
                 navigate('/weakestLink')
+            } else {
+                window.alert("Выгоните игрока!");
             }
         };
 
         return (
-            <div>
-                <div>{players}</div>
+            <div className={styles.menu}>
+                {isShowPlayers ? <div className={isShowPlayers ? styles.show : styles.hide}>{players}</div> : <></>}
                 <div>
-                    <button onClick={nextRound}>Продолжить игру</button>
+                    <button className={styles.nextRound} onClick={nextRound}>Продолжить игру</button>
                 </div>
-                <div className={isShowStats ? styles.show : styles.hide}>{sortStatsPlayers}</div>
-                <div className={isShowStats ? styles.show : styles.hide}>{statsDeletedPlayer}</div>
+                {isShowStats ? <div className={isShowStats ? styles.show : styles.hide}>{sortStatsPlayers}</div> : <></>}
+                {isShowStats ? <div className={isShowStats ? styles.show : styles.hide}>{statsDeletedPlayer}</div> : <></>}
             </div>
         )
     }

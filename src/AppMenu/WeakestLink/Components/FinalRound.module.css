@@ -1,12 +1,28 @@
 .questionWindowFinal {
-
+    color: #ffffff;
+    font-size: 60px;
 }
 
 .questionsFinal {
+    font-size: 100px;
+    margin-bottom: 50px;
+    margin-top: 50px;
 
 }
 
+.finalPlayerAnswers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
 .playerFinal {
+
+}
+
+.name {
 
 }
 
@@ -15,9 +31,24 @@
 }
 
 .true {
-
+    color: green;
 }
 
 .false {
+    color: red;
 
+}
+
+.active {
+    font-weight: bold;
+    color: red;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+.inactive {
+    font-weight: normal;
+    color: white;
+    margin-bottom: 100px;
+    margin-top: 100px;
 }

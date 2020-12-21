@@ -3,7 +3,7 @@ import styles from './QuestionWindow.module.css'
 
 const MoneyBank = (props) => {
     return (
-        <div className={styles}>
+        <div className={styles.moneyBank}>
             {props.moneyBank}
         </div>
     )

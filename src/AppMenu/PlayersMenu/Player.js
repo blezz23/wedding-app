@@ -6,10 +6,11 @@ const Player = (props) => {
         if (props.numberOfRound < 8 && props.delPlayerRound === false) {
             if (window.confirm(`Подтвердить удаление игрока ${props.name}`)) {
                 props.deletePlayer(props.id);
-                props.showStats(true)
+                props.showStats(true);
+                props.showPlayers(false);
+                props.allowDltPlayer(true);
             }
         }
-        props.allowDltPlayer(true)
     };
 
     return (

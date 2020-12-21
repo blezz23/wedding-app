@@ -11,12 +11,12 @@ let initialState = {
     playersData: [
         {id: 0, name: 'Nikita', trueAnswer: 0, falseAnswer: 0, sumAddedInBank: 0},
         {id: 1, name: 'Elena', trueAnswer: 0, falseAnswer: 0, sumAddedInBank: 0},
-        // {id: 2, name: 'Mr.Nobody', trueAnswer: 0, falseAnswer: 0, sumAddedInBank: 0},
-        // {id: 3, name: 'Hulk', trueAnswer: 0, falseAnswer: 0, sumAddedInBank: 0},
-        // {id: 4, name: 'Nikita', trueAnswer: 0, falseAnswer: 0, sumAddedInBank: 0},
-        // {id: 5, name: 'Elena', trueAnswer: 0, falseAnswer: 0, sumAddedInBank: 0},
-        // {id: 6, name: 'Mr.Nobody', trueAnswer: 0, falseAnswer: 0, sumAddedInBank: 0},
-        // {id: 7, name: 'Hulk', trueAnswer: 0, falseAnswer: 0, sumAddedInBank: 0}
+        {id: 2, name: 'Mr.Nobody', trueAnswer: 0, falseAnswer: 0, sumAddedInBank: 0},
+        {id: 3, name: 'Hulk', trueAnswer: 0, falseAnswer: 0, sumAddedInBank: 0},
+        {id: 4, name: 'Nikita', trueAnswer: 0, falseAnswer: 0, sumAddedInBank: 0},
+        {id: 5, name: 'Elena', trueAnswer: 0, falseAnswer: 0, sumAddedInBank: 0},
+        {id: 6, name: 'Mr.Nobody', trueAnswer: 0, falseAnswer: 0, sumAddedInBank: 0},
+        {id: 7, name: 'Hulk', trueAnswer: 0, falseAnswer: 0, sumAddedInBank: 0}
     ],
     deletedPlayer: {},
     firstPlayer: {},

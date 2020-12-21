@@ -2,7 +2,7 @@ import styles from './Timer.module.css'
 import React, {useState, useEffect, forwardRef, useImperativeHandle} from 'react';
 
 const Timer = forwardRef((props, ref) => {
-    const [seconds, setSeconds] = useState(240000);
+    const [seconds, setSeconds] = useState(180000);
     const [isActive, setIsActive] = useState(false);
 
     function convertTime(value) {
@@ -22,7 +22,7 @@ const Timer = forwardRef((props, ref) => {
     }
 
     function reset() {
-        setSeconds(240000);
+        setSeconds(180000);
         setIsActive(false);
     }
 
@@ -45,15 +45,15 @@ const Timer = forwardRef((props, ref) => {
     }));
 
     return (
-        <div className={styles}>
+        <div className={styles.timer}>
             <div>
                 {convertTime(seconds)}
             </div>
             <div>
-                <button onClick={toggle}>
+                <button className={styles.start} onClick={toggle}>
                     {isActive ? 'Pause' : 'Start'}
                 </button>
-                <button onClick={reset}>
+                <button className={styles.reset} onClick={reset}>
                     Reset
                 </button>
             </div>

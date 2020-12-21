@@ -1,8 +1,7 @@
 .main {
-    background-color: #1480F3;
+    background-color: #0052A3;
     display: grid;
-    height: 100%;
-    grid-template-columns: 2fr 3fr 3fr;
+    grid-template-columns: 3fr 5fr 5fr;
     grid-template-rows: 5fr 2fr;
     grid-gap: 1vw;
     grid-template-areas:
@@ -12,24 +11,37 @@
 
 .chain {
     grid-area: chain;
-    background-color: #1216f3;
+    background-color: #003568;
     padding: 10px;
+    color: #ffffff;
+    font-size: 20px;
 }
 
 .question {
     grid-area: question;
-    background-color: #3523f3;
+    background-color: #003568;
     padding: 10px;
+    color: #ffffff;
 }
 
 .timer {
     grid-area: timer;
-    background-color: #1730f3;
-    padding: 10px;
+    background-color: #003568;
+    padding: 20px;
+    color: #ffffff;
 }
 
 .bank {
     grid-area: bank;
-    background-color: #100ef3;
-    padding: 10px;
+    background-color: #003568;
+    padding: 50px;
+    color: #ffffff;
+    font-size: 40px;
+}
+
+.playerStats {
+    color: #ffffff;
+    margin-top: 10px;
+    font-size: 40px;
+    line-height: 80px;
 }
