@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../WeakestLink.module.css"
+import styles from "./../../PlayersMenu/PlayersMenu.module.css"
 
 const Stats = (props) => {
     return (

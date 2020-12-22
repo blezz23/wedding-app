@@ -9,6 +9,7 @@ import {
 } from "../../Redux/reducers/playersName-reducer";
 import SecondPlayersMenu from "./SecondPlayersMenu";
 import {PlayersMenuReduxForm} from "./PlayersMenuReduxForm";
+import styles from "./PlayersMenu.module.css";
 
 const PlayersMenu = (props) => {
     const onSubmit = (values) => {

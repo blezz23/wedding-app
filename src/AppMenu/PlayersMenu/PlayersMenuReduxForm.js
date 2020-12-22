@@ -1,6 +1,7 @@
 import {Field, FieldArray, reduxForm} from "redux-form";
 import validate from "./validate";
 import React from "react";
+import styles from "./PlayersMenu.module.css";
 
 const renderField = ({input, playerId, label, type, meta: {touched, error}}) => (
     <div>

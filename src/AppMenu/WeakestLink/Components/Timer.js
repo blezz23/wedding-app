@@ -2,7 +2,7 @@ import styles from './Timer.module.css'
 import React, {useState, useEffect, forwardRef, useImperativeHandle} from 'react';
 
 const Timer = forwardRef((props, ref) => {
-    const [seconds, setSeconds] = useState(180000);
+    const [seconds, setSeconds] = useState(props.timerTime);
     const [isActive, setIsActive] = useState(false);
 
     function convertTime(value) {
@@ -22,7 +22,7 @@ const Timer = forwardRef((props, ref) => {
     }
 
     function reset() {
-        setSeconds(180000);
+        setSeconds(props.timerTime);
         setIsActive(false);
     }
 

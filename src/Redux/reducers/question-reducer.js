@@ -1,4 +1,5 @@
 let NUMBER_OF_ROUND_CHANGE = "/questions/NUMBER_OF_ROUND_CHANGE";
+let CHANGE_TIMER_TIME = "/questions/CHANGE_TIMER_TIME";
 
 let initialState = {
     questionsRound1: [
@@ -203,7 +204,8 @@ let initialState = {
         {id: 6, question: "Какую краску, применявшуюся для тонирования фотографий в коричневый цвет, получали из содержимого чернильного мешка каракатиц?"},
         {id: 6, question: "Что согласно легенде растворила и выпила на пиру с Марком Антонием царица Египта Клеопатра?"}
     ],
-    numberOfRound: 1
+    numberOfRound: 1,
+    timeTimer: 150000
 };
 
 const questionsReducer = (state = initialState, action) => {
@@ -213,11 +215,17 @@ const questionsReducer = (state = initialState, action) => {
                 ...state,
                 numberOfRound: action.numberOfRound
             };
+        case CHANGE_TIMER_TIME:
+            return {
+                ...state,
+                timeTimer: action.timeTimer
+            };
         default:
             return state
     }
 };
 
 export const numberOfRoundChangeAC = (numberOfRound) => ({type: NUMBER_OF_ROUND_CHANGE, numberOfRound});
+export const timeTimerChangeAC = (timeTimer) => ({type: CHANGE_TIMER_TIME, timeTimer});
 
 export default questionsReducer;

@@ -2,25 +2,19 @@
     background-color: #010142;
     display: grid;
     grid-template-areas: "quiz weakestLink";
-    height: 50px;
+    padding: 1%;
 }
 
 .quiz {
     grid-area: quiz;
-    padding: 10px;
-}
-
-.quizA {
-    text-decoration: none;
-    color: white;
 }
 
 .weakestLink {
     grid-area: weakestLink;
-    padding: 10px;
 }
 
-.weakestLinkA {
+.quizA, .weakestLinkA {
     text-decoration: none;
     color: white;
+    font-size: 120%;
 }

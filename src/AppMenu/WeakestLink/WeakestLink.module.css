@@ -2,46 +2,30 @@
     background-color: #0052A3;
     display: grid;
     grid-template-columns: 3fr 5fr 5fr;
-    grid-template-rows: 5fr 2fr;
+    grid-template-rows: 8fr 3fr;
     grid-gap: 1vw;
     grid-template-areas:
             "chain question question"
             "chain bank timer";
 }
 
+.chain, .question, .bank, .timer {
+    background-color: #003568;
+    color: #ffffff;
+}
+
 .chain {
     grid-area: chain;
-    background-color: #003568;
-    padding: 10px;
-    color: #ffffff;
-    font-size: 20px;
 }
 
 .question {
     grid-area: question;
-    background-color: #003568;
-    padding: 10px;
-    color: #ffffff;
 }
 
 .timer {
     grid-area: timer;
-    background-color: #003568;
-    padding: 20px;
-    color: #ffffff;
 }
 
 .bank {
     grid-area: bank;
-    background-color: #003568;
-    padding: 50px;
-    color: #ffffff;
-    font-size: 40px;
-}
-
-.playerStats {
-    color: #ffffff;
-    margin-top: 10px;
-    font-size: 40px;
-    line-height: 80px;
 }

@@ -1,17 +1,19 @@
 .questionWindow {
     display: grid;
     grid-template-rows: 5fr 1fr;
+    height: 100%;
 }
 
 .question {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 40px;
+    font-size: 300%;
+    padding: 5%
 }
 
 .player {
     font-weight: bold;
     color: red;
-    font-size: 40px;
+    font-size: 300%;
 }

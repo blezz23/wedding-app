@@ -1,16 +1,11 @@
 .timer {
-    font-size: 40px;
+    font-size: 300%;
+    padding: 10% 5%;
 }
 
-.start {
-    margin-right: 10px;
-    height: 30px;
-    width: 80px;
-    font-size: 20px;
-}
-
-.reset {
-    height: 30px;
-    width: 80px;
-    font-size: 20px;
+.start, .reset {
+    min-width: 50px;
+    width: 19%;
+    font-size: 45%;
+    padding: 1%;
 }

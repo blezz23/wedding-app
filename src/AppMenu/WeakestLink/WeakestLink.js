@@ -7,7 +7,7 @@ import QuestionWindow from "./Components/QuestionWindow";
 import Timer from "./Components/Timer";
 import MoneyBank from "./Components/MoneyBank";
 import {addBankOfRoundAC} from "../../Redux/reducers/moneyChain-reducer";
-import {numberOfRoundChangeAC} from "../../Redux/reducers/question-reducer";
+import {numberOfRoundChangeAC, timeTimerChangeAC} from "../../Redux/reducers/question-reducer";
 import {
     addFinalAnswerAC,
     addSumInBankAC,
@@ -78,6 +78,7 @@ const WeakestLink = (props) => {
             setStopRound(0);
             if (props.numberOfRound < 8)
                 props.numberOfRoundChange(props.numberOfRound + 1);
+            props.timeTimerChange(props.timeTimer - 10000);
             navigate("/menu/weakestLink");
         }
         return false
@@ -187,6 +188,7 @@ const WeakestLink = (props) => {
             <div className={styles.timer}>
                 <Timer
                     ref={timerRef}
+                    timerTime={props.timeTimer}
                     setActiveQuestion={setActiveQuestion}
                     activeQuestion={activeQuestion}/>
             </div>
@@ -204,7 +206,8 @@ let mapStateToProps = (state) => {
         playersName: state.playersName.playersData,
         moneyBank: state.moneyChainModule.moneyBank,
         numberOfRound: state.questionsModule.numberOfRound,
-        firstPlayer: state.playersName.firstPlayer.id
+        firstPlayer: state.playersName.firstPlayer.id,
+        timeTimer: state.questionsModule.timeTimer
     }
 };
 
@@ -215,6 +218,9 @@ let mapDispatchToProps = (dispatch) => {
         },
         numberOfRoundChange: (numberOfRound) => {
             dispatch(numberOfRoundChangeAC(numberOfRound))
+        },
+        timeTimerChange: (timeTimer) => {
+            dispatch(timeTimerChangeAC(timeTimer))
         },
         trueAnswer: (id) => {
             dispatch(trueAnswerAC(id))

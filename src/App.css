@@ -1,9 +1,11 @@
 .App {
   text-align: center;
-  height: 100%;
-  background-color: #282c34;
 }
 
 .App form {
   background-color: #282c34;
+}
+
+.App button {
+  margin: 5px;
 }
