@@ -3,9 +3,7 @@
     padding: 10% 5%;
 }
 
-.start, .reset {
-    min-width: 50px;
-    width: 19%;
-    font-size: 45%;
-    padding: 1%;
+.timer button {
+    font-size: 50%;
+    min-width: 25%;
 }

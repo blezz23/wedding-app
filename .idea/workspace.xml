@@ -2,24 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8515d9ea-bb99-4c24-a524-f5948a034996" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/FinalAnswers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppMenu/AppMenu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/AppMenu.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/PlayersMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/PlayersMenu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/PlayersMenu.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/PlayersMenu.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/PlayersMenuReduxForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/PlayersMenuReduxForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyBank.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyBank.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyBank.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyBank.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyChain.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/MoneyChain.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/QuestionWindow.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/QuestionWindow.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/Stats.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/Stats.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/SecondPlayersMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/PlayersMenu/SecondPlayersMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/FinalRound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/FinalRound.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/FinalRound.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/FinalRound.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/PlayerFinal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/PlayerFinal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/Timer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/Timer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/Timer.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/Components/Timer.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/WeakestLink.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/WeakestLink.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AppMenu/WeakestLink/WeakestLink.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppMenu/WeakestLink/WeakestLink.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/reducers/question-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/reducers/question-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,8 +30,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -135,7 +130,8 @@
       <workItem from="1604175761181" duration="292000" />
       <workItem from="1608571421687" duration="10938000" />
       <workItem from="1608583000302" duration="8000" />
-      <workItem from="1608669849618" duration="8729000" />
+      <workItem from="1608669849618" duration="9012000" />
+      <workItem from="1608727219881" duration="17873000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1598895008977</created>
@@ -298,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608582668611</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="CSS refactoring + timerTimeChange">
+      <created>1608680833193</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1608680833193</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,7 +343,8 @@
     <MESSAGE value="Added confirm for &quot;+&quot;, allowDltPlayerAC and FinalRound logic" />
     <MESSAGE value="Added FinalRound true/false answers" />
     <MESSAGE value="CSS + alert nextRound" />
-    <option name="LAST_COMMIT_MESSAGE" value="CSS + alert nextRound" />
+    <MESSAGE value="CSS refactoring + timerTimeChange" />
+    <option name="LAST_COMMIT_MESSAGE" value="CSS refactoring + timerTimeChange" />
   </component>
   <component name="WindowStateProjectService">
     <state x="211" y="72" width="2019" height="1149" key="CommitChangelistDialog2" timestamp="1604104063513">

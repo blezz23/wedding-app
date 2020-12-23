@@ -1,30 +1,29 @@
 import {Field, FieldArray, reduxForm} from "redux-form";
 import validate from "./validate";
 import React from "react";
-import styles from "./PlayersMenu.module.css";
+import styles from "./../../App.css";
 
 const renderField = ({input, playerId, label, type, meta: {touched, error}}) => (
     <div>
-        <div>
-            <input {...input} {...playerId} type={type} placeholder={label}/>
-            {touched && error && <span>{error}</span>}
-        </div>
+        <input {...input} {...playerId} type={type} placeholder={label}/>
+        <div>{touched && error && <span>{error}</span>}</div>
     </div>
 );
 
 const renderPlayers = ({fields, meta: {error, submitFailed}}) => (
     <ul>
-        <li>
-            <button type="button" onClick={() => fields.push({})}>Добавить игрока</button>
-            {submitFailed && error && <span>{error}</span>}
-        </li>
+        <div>
+            <li>
+                <button type="button" onClick={() => fields.push({})}>Добавить игрока</button>
+                <div>{submitFailed && error && <span>{error}</span>}</div>
+            </li>
+        </div>
         {fields.map((player, index) =>
             <li key={index}>
+                <h4>Игрок #{index + 1}</h4>
                 <button
                     type="button"
-                    title="Remove player"
-                    onClick={() => fields.remove(index)}/>
-                <h4>Игрок #{index + 1}</h4>
+                    onClick={() => fields.remove(index)}>X</button>
                 <Field
                     key={index}
                     name={`${player}.name`}

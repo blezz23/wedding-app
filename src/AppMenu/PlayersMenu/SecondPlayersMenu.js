@@ -67,11 +67,18 @@ const SecondPlayersMenu = (props) => {
             }
         };
 
+        let showBestPlayer = () => {
+
+        };
+
         return (
             <div className={styles.menu}>
                 {isShowPlayers ? <div className={isShowPlayers ? styles.show : styles.hide}>{players}</div> : <></>}
                 <div>
-                    <button className={styles.nextRound} onClick={nextRound}>Продолжить игру</button>
+                    <button onClick={nextRound}>Продолжить игру</button>
+                    {isShowPlayers ?
+                        <button onClick={showBestPlayer}
+                                className={isShowPlayers ? styles.show : styles.hide}>Сильное звено</button> : <></>}
                 </div>
                 {isShowStats ? <div className={isShowStats ? styles.show : styles.hide}>{sortStatsPlayers}</div> : <></>}
                 {isShowStats ? <div className={isShowStats ? styles.show : styles.hide}>{statsDeletedPlayer}</div> : <></>}

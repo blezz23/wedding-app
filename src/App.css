@@ -7,5 +7,48 @@
 }
 
 .App button {
-  margin: 5px;
+  padding: 0.1%;
+  width: 12%;
+  height: 15%;
+  font-size: 120%;
+  border-radius: 5px;
+  margin: 0.5%;
+}
+
+.App input {
+  font-size: 120%;
+  margin: 0.5%;
+  padding: 0.1%;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.App h4 {
+  display: inline-block;
+  font-size: 150%;
+  color: white;
+  margin: 3%;
+}
+
+.App span {
+  display: inline-block;
+  margin: 1%;
+  color: red;
+  font-size: 130%;
+}
+
+.App ul>li {
+  display: inline-block;
+  min-width: 200px;
+  width: 22%;
+  padding: 6% 0;
+  border: 1px solid black;
+}
+
+.App li {
+  margin: 1%;
+}
+
+::-webkit-input-placeholder {
+  text-align:center;
 }

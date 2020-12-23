@@ -40,10 +40,10 @@ const WeakestLink = (props) => {
             props.trueAnswer(playerNameNumber)
         } else {
             if (props.playersName[playerNameNumber].answer[numberFinalQuestion] === 0) {
-                props.addFinalAnswer(playerNameNumber, 1, numberFinalQuestion)
+                props.addFinalAnswer(playerNameNumber, 'V', numberFinalQuestion)
             } else {
                 setNumberFinalQuestion(numberFinalQuestion + 1);
-                props.addFinalAnswer(playerNameNumber, 1, numberFinalQuestion + 1)
+                props.addFinalAnswer(playerNameNumber, 'V', numberFinalQuestion + 1)
             }
         }
     };
@@ -54,10 +54,10 @@ const WeakestLink = (props) => {
         } else {
 
             if (props.playersName[playerNameNumber].answer[numberFinalQuestion] === 0) {
-                props.addFinalAnswer(playerNameNumber, -1, numberFinalQuestion)
+                props.addFinalAnswer(playerNameNumber, 'X', numberFinalQuestion)
             } else {
                 setNumberFinalQuestion(numberFinalQuestion + 1);
-                props.addFinalAnswer(playerNameNumber, -1, numberFinalQuestion + 1)
+                props.addFinalAnswer(playerNameNumber, 'X', numberFinalQuestion + 1)
             }
         }
     };
@@ -167,6 +167,7 @@ const WeakestLink = (props) => {
             questions={props.questions}
             currentRound={currentRound}
             activeQuestion={activeQuestion}
+            nextQuestion={nextQuestion}
             setPlayerNameNumber={setPlayerNameNumber}/>
     }
 

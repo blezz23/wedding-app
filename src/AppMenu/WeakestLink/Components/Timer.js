@@ -50,11 +50,11 @@ const Timer = forwardRef((props, ref) => {
                 {convertTime(seconds)}
             </div>
             <div>
-                <button className={styles.start} onClick={toggle}>
-                    {isActive ? 'Pause' : 'Start'}
+                <button onClick={toggle}>
+                    {isActive ? 'Пауза' : 'Старт'}
                 </button>
-                <button className={styles.reset} onClick={reset}>
-                    Reset
+                <button onClick={reset}>
+                    Сброс
                 </button>
             </div>
         </div>

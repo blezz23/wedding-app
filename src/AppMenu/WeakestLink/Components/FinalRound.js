@@ -19,6 +19,7 @@ const FinalRound = (props) => {
             name={pl.name}
             answer={pl.answer}
             isActive={isActive}
+            nextQuestion={props.nextQuestion}
             setPlayerNameNumber={props.setPlayerNameNumber}
             checkFirstPlayer={checkFirstPlayer}/>
     });

@@ -11,10 +11,11 @@
 }
 
 .secondPlayerStyle {
-    height: 51px;
-    position: relative;
-    left: 100px;
-    top: 30px;
+    display: inline-block;
+    text-align: center;
+    margin: 4% 2%;
+    width: 20%;
+    border: 2px solid black;
 }
 
 .secondPlayerStyle:hover .deletePlayerButton {
@@ -22,42 +23,28 @@
 }
 
 .secondPlayerName {
-    height: 40px;
-    position: absolute;
+    margin: 10% 0;
     color: #ffffff;
-    font-size: 40px;
+    font-size: 300%;
 }
 
 .deletePlayerButton {
     visibility: hidden;
 }
 
-.secondPlayerStyle div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .secondPlayerStyle button {
-    height: 50px;
-    width: 300px;
-    font-size: 20px;
+    margin: 5%;
+    height: 10%;
+    width: 80%;
+    font-size: 120%;
 }
 
-.menu {
-
-}
-
-.nextRound {
-    height: 50px;
-    width: 300px;
-    font-size: 25px;
-    margin: 50px;
+.menu button {
+    margin: 2%;
 }
 
 .playerStats {
     color: #ffffff;
-    margin-top: 10px;
-    font-size: 40px;
-    line-height: 80px;
+    margin-top: 3%;
+    font-size: 170%;
 }
