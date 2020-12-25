@@ -7,6 +7,7 @@ import Stats from '../WeakestLink/Components/Stats';
 const SecondPlayersMenu = (props) => {
         let [isShowStats, setIsShowStats] = useState(false);
         let [isShowPlayers, setIsShowPlayers] = useState(true);
+        let [theBest, setTheBest] = useState("");
 
         let players = props.players.map(pl =>
             <Player
@@ -17,7 +18,9 @@ const SecondPlayersMenu = (props) => {
                 showPlayers={setIsShowPlayers}
                 delPlayerRound={props.allowDeletePlayer}
                 numberOfRound={props.numberOfRound}
-                allowDltPlayer={props.allowDltPlayer}/>);
+                allowDltPlayer={props.allowDltPlayer}
+                isTheBest={theBest === pl.name}
+            />);
 
         let statsPlayers = props.players.slice(0).sort(function (a, b) {
             return b.trueAnswer - a.trueAnswer || a.falseAnswer - b.falseAnswer || b.sumAddedInBank - a.sumAddedInBank
@@ -68,12 +71,12 @@ const SecondPlayersMenu = (props) => {
         };
 
         let showBestPlayer = () => {
-
+            setTheBest(statsPlayers[0].name)
         };
 
         return (
             <div className={styles.menu}>
-                {isShowPlayers ? <div className={isShowPlayers ? styles.show : styles.hide}>{players}</div> : <></>}
+                {isShowPlayers ? <div>{players}</div> : <></>}
                 <div>
                     <button onClick={nextRound}>Продолжить игру</button>
                     {isShowPlayers ?

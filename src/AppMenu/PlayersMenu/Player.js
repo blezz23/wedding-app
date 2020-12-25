@@ -14,11 +14,12 @@ const Player = (props) => {
     };
 
     return (
-        <div className={styles.secondPlayerStyle}>
+        <div className={styles.secondPlayerStyle} style={props.isTheBest ? {borderColor: 'red'} : {borderColor: 'black'}}>
             <div className={styles.secondPlayerName}>{props.name}</div>
-            <button onClick={confirmForm} className={styles.deletePlayerButton}>Вы самое слабое звено. Прощайте!</button>
-        </div>
-    )
+            <button onClick={confirmForm} className={styles.deletePlayerButton}>Вы самое слабое звено.
+                Прощайте!
+            </button>
+        </div>)
 };
 
 export default Player;

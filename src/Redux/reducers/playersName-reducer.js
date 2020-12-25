@@ -13,10 +13,10 @@ let initialState = {
         {id: 1, name: 'Elena', trueAnswer: 0, falseAnswer: 0, sumAddedInBank: 0},
         {id: 2, name: 'Mr.Nobody', trueAnswer: 0, falseAnswer: 0, sumAddedInBank: 0},
         {id: 3, name: 'Hulk', trueAnswer: 0, falseAnswer: 0, sumAddedInBank: 0},
-        {id: 4, name: 'Nikita', trueAnswer: 0, falseAnswer: 0, sumAddedInBank: 0},
-        {id: 5, name: 'Elena', trueAnswer: 0, falseAnswer: 0, sumAddedInBank: 0},
-        {id: 6, name: 'Mr.Nobody', trueAnswer: 0, falseAnswer: 0, sumAddedInBank: 0},
-        {id: 7, name: 'Hulk', trueAnswer: 0, falseAnswer: 0, sumAddedInBank: 0}
+        {id: 4, name: 'Lesovoy', trueAnswer: 0, falseAnswer: 0, sumAddedInBank: 0},
+        {id: 5, name: 'Harik', trueAnswer: 0, falseAnswer: 0, sumAddedInBank: 0},
+        {id: 6, name: 'Proskovia', trueAnswer: 0, falseAnswer: 0, sumAddedInBank: 0},
+        {id: 7, name: 'Saskiya', trueAnswer: 0, falseAnswer: 0, sumAddedInBank: 0}
     ],
     deletedPlayer: {},
     firstPlayer: {},

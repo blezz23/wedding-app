@@ -4,6 +4,7 @@ import PlayerFinal from "./PlayerFinal";
 
 const FinalRound = (props) => {
     let [nameFirstPlayer, setNameFirstPlayer] = useState('');
+    let [stopNextQuestion, setStopNextQuestion] = useState(0);
 
     const checkFirstPlayer = (event) => {
         setNameFirstPlayer(event.target.textContent)
@@ -20,6 +21,8 @@ const FinalRound = (props) => {
             answer={pl.answer}
             isActive={isActive}
             nextQuestion={props.nextQuestion}
+            stopNextQuestion={stopNextQuestion}
+            setStopNextQuestion={setStopNextQuestion}
             setPlayerNameNumber={props.setPlayerNameNumber}
             checkFirstPlayer={checkFirstPlayer}/>
     });

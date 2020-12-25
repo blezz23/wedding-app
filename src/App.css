@@ -2,10 +2,6 @@
   text-align: center;
 }
 
-.App form {
-  background-color: #282c34;
-}
-
 .App button {
   padding: 0.1%;
   width: 12%;
@@ -35,6 +31,7 @@
   margin: 1%;
   color: red;
   font-size: 130%;
+  vertical-align: center;
 }
 
 .App ul>li {
